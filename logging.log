@@ -1,0 +1,24 @@
+2021-04-25 14:48:35,643 Program Execution
+2021-04-25 14:48:35,644 UI_MainWindow
+2021-04-25 14:48:36,076 UI Elements
+2021-04-25 14:48:38,358 open image1
+2021-04-25 14:48:42,358 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/boat.png
+2021-04-25 14:48:42,358 create_image
+2021-04-25 14:48:42,364 image shape is(512, 512, 3)
+2021-04-25 14:48:42,428 check image size 
+2021-04-25 14:48:42,428 image size is(512, 512, 3)
+2021-04-25 14:48:42,429 opened
+2021-04-25 14:48:42,429 image size is(512, 512, 3)
+2021-04-25 14:48:44,138 open image2
+2021-04-25 14:48:45,562 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/messi.png
+2021-04-25 14:48:45,562 create_image
+2021-04-25 14:48:45,569 image shape is(351, 559, 3)
+2021-04-25 14:48:45,620 check image size 
+2021-04-25 14:48:45,622 Not same size
+2021-04-25 14:48:50,917 open image1
+2021-04-25 14:48:53,311 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/salah.png
+2021-04-25 14:48:53,311 create_image
+2021-04-25 14:48:53,321 image shape is(960, 960, 3)
+2021-04-25 14:48:53,500 check image size 
+2021-04-25 14:48:53,501 opened
+2021-04-25 14:48:53,501 image size is(512, 512, 3)
