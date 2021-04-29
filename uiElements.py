@@ -7,19 +7,24 @@ logger = logging.getLogger()
 class Ui():
     def __init__(self,win) :
         logger.debug('UI Elements')
-        self.plots = [ win.original_1, win.original_2, win.components_p1, win.components_p2,win.output1, win.output2]
+        self.originals = [ win.original_1, win.original_2]
+        self.components = [ win.components_p1, win.components_p2]
+        self.outputs = [ win.output1, win.output2]
+        self.plots=[self.originals,self.components,self.outputs]
         self.sliders = [win.slider1,win.slider2]
         self.sliders_txts=[win.slider1_text, win.slider2_text]
-        self.img1 = [win.original_1 , win.components_p1]
-        self.img2 = [win.original_2 , win.components_p2]
-        self.img_plots=[self.img1,self.img2]
-        self.outputs=[win.output1, win.output2]
-        self.init_plots()
+        self.img_combos=[win.comboBox_components1 , win.comboBox_components2]
+
+        for plot in self.plots:
+            self.init_plots(plot)
+
+        self.disable_combos(self.img_combos)
         self.config_sliders()
+        
 
     
-    def init_plots(self):
-        for plot in self.plots:
+    def init_plots(self,plot_list):
+        for plot in plot_list:
             plot.showAxis('bottom', False)
             plot.showAxis('left', False)
             plot.setBackground('w')
@@ -31,6 +36,12 @@ class Ui():
             slider.setSingleStep(5)
             slider.setTickInterval(10)
             self.sliders_txts[i].setText(str(slider.value()))
+
+    def disable_combos(self,combo_list):
+        for combobox in combo_list:
+            combobox.setDisabled(True)
+
+
 
     
 

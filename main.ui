@@ -437,6 +437,13 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLabel" name="slider1_text">
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget_8">
@@ -616,6 +623,13 @@
         <widget class="QSlider" name="slider2">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="slider2_text">
+         <property name="text">
+          <string>TextLabel</string>
          </property>
         </widget>
        </item>

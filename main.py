@@ -2,6 +2,8 @@ import PyQt5.QtGui
 from PyQt5 import  QtWidgets
 import mainUI
 from Image import Image
+from Image import Output
+
 from uiElements import Ui
 import sys
 import logging
@@ -19,35 +21,42 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.setupUi(self)
         self.ui_elements=Ui(self)
         self.show()
-        self.images = {} #store image path and object
+        self.images = {0: None, 1:None} #store image path and object
         self.size = None
         self.imgs=0
         
         
 ########connections
-        self.btn_open1.clicked.connect(lambda: self.open_img(1))
-        self.btn_open2.clicked.connect(lambda: self.open_img(2))
+        self.btn_open1.clicked.connect(lambda: self.open_img(0))
+        self.btn_open2.clicked.connect(lambda: self.open_img(1))
         # for slider in self.ui_elements.sliders:
         #     slider.valueChanged.connect() ##call self.ui_elements.config_slider in the slider change func
-
-
-
-   
         
+        self.comboBox_components1.currentIndexChanged.connect(lambda : self.img_comp(0))   
+        self.comboBox_components2.currentIndexChanged.connect(lambda : self.img_comp(1))   
+
+    def img_comp(self, index):
+        logger.debug('plotting {} of image {}'.format(self.ui_elements.img_combos[index].currentText(), index+1))
+        comp_index = self.ui_elements.img_combos[index].currentIndex()
+        self.images[index].show(self.ui_elements.components[index],self.images[index].comps[comp_index])
+        
+
         
 
     def open_img(self,index):
-        logger.debug('open image'+str(index))
+        logger.debug('open image {}'.format(index+1))
         img_path = PyQt5.QtWidgets.QFileDialog.getOpenFileName(None, 'open image', None, "PNG *.png;; JPG *.jpg")[0]
         if img_path:
             logger.info('Opening image : '+ img_path )
-            self.images[index]= Image(path=img_path)
+            self.images[index]= Image()
+            self.images[index].read(img_path)
             if self.size_check(self.images[index],index):
                 logger.debug("opened")
-                logger.info("image size is"+str(self.size))
-                ##########
-                ##plotting
-                ##########
+                #show original image and its combonents
+                self.images[index].show(self.ui_elements.originals[index],self.images[index].img_data)
+                self.img_comp(index)
+                self.ui_elements.img_combos[index].setEnabled(True)
+
             else:
                 del self.images[index]
                 self.images[index]=None
@@ -64,16 +73,19 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                    
 
     def size_check(self,image,index):
-        logger.debug('check image size ')
+        logger.debug('check image {} size '.format(index+1))
         #check if there is more than one image opened , if same size return 1
         if self.size:
-            if (index == 1 and self.images[2]) or (index == 2 and self.images[1]):
+            if (index == 0 and self.images[1]) or (index == 1 and self.images[0]):
+                logger.debug("there is another image obened")
                 if image.img_shape == self.size:
+                    logger.debug("same size")
                     return 1
                 else:
                     logger.debug("not same size")
                     return 0
             else:
+                logger.debug("no other image")
                 return 1
             
         else:
