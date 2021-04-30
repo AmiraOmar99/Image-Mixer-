@@ -1,6 +1,7 @@
 from PyQt5 import  QtWidgets
-
 import logging
+import numpy as np
+import pyqtgraph as pg
 logger = logging.getLogger()
 
 
@@ -13,13 +14,30 @@ class Ui():
         self.plots=[self.originals,self.components,self.outputs]
         self.sliders = [win.slider1,win.slider2]
         self.sliders_txts=[win.slider1_text, win.slider2_text]
+        ##WIndow Elements##
         self.img_combos=[win.comboBox_components1 , win.comboBox_components2]
+        self.img_mixer_combos=[win.Mixer_components1   , win.Mixer_components2 ]
+        self.img_slider_combos=[win.Img_compo1  , win.Img_compo2 ]
+        self.Combo_output=[win.comboBox_outputs]
+
+        self.selectedImages = [0, 0]
+        self.selectedComponents = ["Magnitude", "Phase"]
+        self.scaleValues = [0.5, 0.5]
+        self.recievedData = [None, None]
+        self.selectedOutput = 0
+        self.ouputImages = [None, None]
 
         for plot in self.plots:
             self.init_plots(plot)
 
-        self.disable_combos(self.img_combos)
+        self.disable_elem(self.img_combos)
+        self.disable_elem(self.img_mixer_combos)
+        self.disable_elem(self.img_slider_combos)
+        self.disable_elem(self.Combo_output)
+        self.disable_elem(self.sliders)
+
         self.config_sliders()
+
         
 
     
@@ -33,13 +51,28 @@ class Ui():
         for i , slider in enumerate(self.sliders):
             slider.setMinimum(0)
             slider.setMaximum(100)
-            slider.setSingleStep(5)
+            slider.setSingleStep(10)
             slider.setTickInterval(10)
-            self.sliders_txts[i].setText(str(slider.value()))
+            slider.setValue(50)
+            #self.sliders_txts[i].setText(str(slider.value()))
 
-    def disable_combos(self,combo_list):
-        for combobox in combo_list:
-            combobox.setDisabled(True)
+    def disable_elem(self,element_list):
+        for element in element_list:
+            element.setDisabled(True)
+
+    def enable_elem(self,element_list):
+        for element in element_list:
+            element.setEnabled(True)
+        
+
+    
+
+
+    
+
+
+
+
 
 
 

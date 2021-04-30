@@ -13,8 +13,7 @@ class Image():
         self.phase=None
         self.real=None
         self.imaginary=None
-        
-    
+
     def read(self,path):
         self.img_data = cv2.imread(path,0)
         self.img_shape=self.img_data.shape
@@ -26,7 +25,6 @@ class Image():
         self.imaginary = self.img_fft.imag
         self.img_fftshift = np.fft.fftshift(self.img_fft)
         self.comps=[np.log(np.abs(self.img_fftshift+1)) , np.angle(self.img_fftshift) , np.log(self.img_fftshift.real+1) , np.log(self.img_fftshift.imag+1)]
-
     
     def show(self,plot,data):
         self.plot=plot
@@ -37,6 +35,7 @@ class Image():
         self.plot.setXRange(min=0, max=data.shape[0], padding=0)
         self.plot.setYRange(min=0, max=data.shape[1], padding=0)
         self.plot.autoRange(padding=0)
+
 
 
 class Output(Image):
