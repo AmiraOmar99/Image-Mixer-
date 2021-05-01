@@ -24,7 +24,7 @@ class Image():
         self.real = self.img_fft.real
         self.imaginary = self.img_fft.imag
         self.img_fftshift = np.fft.fftshift(self.img_fft)
-        self.comps=[np.log(np.abs(self.img_fftshift+1)) , np.angle(self.img_fftshift) , np.log(self.img_fftshift.real+1) , np.log(self.img_fftshift.imag+1)]
+        self.comps=[np.log(np.abs(self.img_fftshift)) , np.angle(self.img_fftshift) , np.log(self.img_fftshift.real+1) , np.log(self.img_fftshift.imag+1)]
     
     def show(self,plot,data):
         self.plot=plot

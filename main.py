@@ -28,8 +28,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 ########connections
         self.btn_open1.clicked.connect(lambda: self.open_img(0))
         self.btn_open2.clicked.connect(lambda: self.open_img(1))
-        self.comboBox_components1.currentIndexChanged.connect(lambda : self.img_comp(0))   
-        self.comboBox_components2.currentIndexChanged.connect(lambda : self.img_comp(1))
+        
+        for index , combo in enumerate(self.ui_elements.img_combos):
+            self.connect_img_combos(index)
+
+    def connect_img_combos(self, index):
+        self.ui_elements.img_combos[index].currentIndexChanged.connect(lambda :self.img_comp(index))
 
 
     def img_comp(self, index):
@@ -112,7 +116,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.showOutput(self.Select_Output())
 
     def setFunctions(self, index):
-       
+
         self.ui_elements.img_slider_combos[index].activated[str].connect(lambda: self.selectImage(index))
         self.ui_elements.img_mixer_combos[index].activated[str].connect(lambda: self.selectComponent(index))
         self.ui_elements.sliders[index].valueChanged.connect(lambda: self.sliderMoved(index))
