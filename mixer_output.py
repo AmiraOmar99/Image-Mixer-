@@ -6,23 +6,25 @@ from Image import Image
 logger = logging.getLogger()
 
 
-class Ui():
+class Mixer():
     def __init__(self,win) :
-        logger.debug('UI Elements')
         self.image_test=Image()
         self.images = {0: None, 1:None} #store image path and object
-
+        
         self.originals = [ win.original_1, win.original_2]
         self.components = [ win.components_p1, win.components_p2]
         self.outputs = [ win.output1, win.output2]
         self.plots=[self.originals,self.components,self.outputs]
         self.sliders = [win.slider1,win.slider2]
         self.sliders_txts=[win.slider1_text, win.slider2_text]
+
         ##WIndow Elements##
         self.img_combos=[win.comboBox_components1 , win.comboBox_components2]
         self.img_mixer_combos=[win.Mixer_components1   , win.Mixer_components2 ]
         self.img_slider_combos=[win.Img_compo1  , win.Img_compo2 ]
         self.Combo_output=[win.comboBox_outputs]
+
+        self.mixing_items=[self.img_mixer_combos,self.img_slider_combos,self.Combo_output,self.sliders,self.img_combos] #items to be enabled after uploading 2 images
 
         self.selectedImages = [0, 0]
         self.selectedComponents = ["Magnitude", "Phase"]
@@ -34,11 +36,14 @@ class Ui():
         for plot in self.plots:
             self.init_plots(plot)
 
-        self.disable_elem(self.img_combos)
-        self.disable_elem(self.img_mixer_combos)
-        self.disable_elem(self.img_slider_combos)
-        self.disable_elem(self.Combo_output)
-        self.disable_elem(self.sliders)
+        for item in self.mixing_items:
+                self.disable_elem(item)    
+
+        # self.disable_elem(self.img_combos)
+        # self.disable_elem(self.img_mixer_combos)
+        # self.disable_elem(self.img_slider_combos)
+        # self.disable_elem(self.Combo_output)
+        # self.disable_elem(self.sliders)
 
         self.config_sliders()
 
@@ -49,7 +54,7 @@ class Ui():
         self.sliders[index].valueChanged.connect(lambda: self.sliderMoved(index))
         self.sliders[index].sliderReleased.connect(lambda: self.sliderReleased(index))
         self.Combo_output[0].activated[str].connect(lambda: self.showOutput(self.Select_Output()))
-    
+
     def init_plots(self,plot_list):
         for plot in plot_list:
             plot.showAxis('bottom', False)
@@ -166,7 +171,7 @@ class Ui():
 
 
     def getMixers(self, image1, image2, mixType, scale):
-        logger.debug("checking the mixtype and scaling the component chosen")
+        
         if mixType == "m":
             mixer = image1.magnitude * scale + image2.magnitude*(1-scale)
         elif mixType == "um":
@@ -204,6 +209,7 @@ class Ui():
             selected1 = self.selectedImages[0]
             selected2 = self.selectedImages[1]
             mixer1 = self.getMixers(self.images[selected1], self.images[selected2], mixType1,self.scaleValues[0])
+
             mixer2 = self.getMixers(self.images[selected2], self.images[selected1], mixType2,self.scaleValues[1])
             result = self.multiplyMixers(mixer1, mixer2, mixType1)
             self.image_test.img_data= np.abs(np.fft.ifft2(result))

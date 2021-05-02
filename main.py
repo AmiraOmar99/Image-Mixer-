@@ -2,8 +2,7 @@ import PyQt5.QtGui
 from PyQt5 import  QtWidgets
 import mainUI
 from Image import Image
-from Image import Output
-from uiElements import Ui
+from mixer_output import Mixer
 import numpy as np
 import sys
 import pyqtgraph as pg
@@ -19,27 +18,28 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         logger.debug('Program Execution')
         super(MainWindow, self).__init__()
         self.setupUi(self)
-        self.ui_elements=Ui(self)
+        self.mixing=Mixer(self)
+        # self.image_test=Image()
         self.show()
-        self.images = {0: None, 1:None} #store image path and object
+        # self.images = {0: None, 1:None} #store image path and object
         self.size = None
         self.imgs=0
-        
+        # self.enabled_items=[self.mixing.img_mixer_combos,self.mixing.img_slider_combos,self.mixing.Combo_output,self.mixing.sliders] #items to be enabled after uploading 2 images
 ########connections
         self.btn_open1.clicked.connect(lambda: self.open_img(0))
         self.btn_open2.clicked.connect(lambda: self.open_img(1))
         
-        for index , combo in enumerate(self.ui_elements.img_combos):
+        for index , combo in enumerate(self.mixing.img_combos):
             self.connect_img_combos(index)
 
     def connect_img_combos(self, index):
-        self.ui_elements.img_combos[index].currentIndexChanged.connect(lambda :self.img_comp(index))
+        self.mixing.img_combos[index].currentIndexChanged.connect(lambda :self.img_comp(index))
 
 
     def img_comp(self, index):
-        logger.debug('plotting {} of image {}'.format(self.ui_elements.img_combos[index].currentText(), index+1))
-        comp_index = self.ui_elements.img_combos[index].currentIndex()
-        self.images[index].show(self.ui_elements.components[index],self.images[index].comps[comp_index])
+        logger.debug('plotting {} of image {}'.format(self.mixing.img_combos[index].currentText(), index+1))
+        comp_index = self.mixing.img_combos[index].currentIndex()
+        self.mixing.images[index].show(self.mixing.components[index],self.mixing.images[index].comps[comp_index])
         
 
     def open_img(self,index):
@@ -47,18 +47,18 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         img_path = PyQt5.QtWidgets.QFileDialog.getOpenFileName(None, 'open image', None, "PNG *.png;; JPG *.jpg")[0]
         if img_path:
             logger.info('Opening image : '+ img_path )
-            self.images[index]= Image()
-            self.images[index].read(img_path)
-            if self.size_check(self.images[index],index):
+            self.mixing.images[index]= Image()
+            self.mixing.images[index].read(img_path)
+            if self.size_check(self.mixing.images[index],index):
                 logger.debug("opened")
                 #show original image and its combonents
-                self.images[index].show(self.ui_elements.originals[index],self.images[index].img_data)
+                self.mixing.images[index].show(self.mixing.originals[index],self.mixing.images[index].img_data)
                 self.img_comp(index)
-                self.ui_elements.img_combos[index].setEnabled(True)
+                self.mixing.img_combos[index].setEnabled(True)
 
             else:
-                del self.images[index]
-                self.images[index]=None
+                del self.mixing.images[index]
+                self.mixing.images[index]=None
                 logger.debug('Not same size')
                 msg = PyQt5.QtWidgets.QMessageBox()
                 msg.setWindowTitle('ERROR')
@@ -68,26 +68,24 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 self.logger.ERROR("Not Same Size")
         else:
             self.logger.debug("canceled")
-        self.check_opened(self.images)
+        self.check_opened(self.mixing.images)
 
 
     def check_opened(self,image_objects):
         logger.debug("Checking if the user opens the 2 images")
-        if self.images[0] != None and self.images[1] != None:
-            self.ui_elements.enable_elem(self.ui_elements.img_mixer_combos)
-            self.ui_elements.enable_elem(self.ui_elements.img_slider_combos)
-            self.ui_elements.enable_elem(self.ui_elements.Combo_output)
-            self.ui_elements.enable_elem(self.ui_elements.sliders)
+        if self.mixing.images[0] != None and self.mixing.images[1] != None:
+            for item in self.mixing.mixing_items:
+                self.mixing.enable_elem(item)
             for i in range(2):
-                self.setFunctions(i)
-        self.showOutput(self.Select_Output())
+                self.mixing.setFunctions(i)
+        self.mixing.showOutput(self.mixing.Select_Output())
             
 
     def size_check(self,image,index):
         logger.debug('check image {} size '.format(index+1))
         #check if there is more than one image opened , if same size return 1
         if self.size:
-            if (index == 0 and self.images[1]) or (index == 1 and self.images[0]):
+            if (index == 0 and self.mixing.images[1]) or (index == 1 and self.mixing.images[0]):
                 logger.debug("there is another image obened")
                 if image.img_shape == self.size:
                     logger.debug("same size")
@@ -104,169 +102,171 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
             logger.debug('image size is'+str(self.size))
             return 1 
 
-    def selectImage(self, index):
-        logger.debug("selecting image from which we choose the component")
-        self.ui_elements.selectedImage = self.ui_elements.img_slider_combos[index].currentText()
-        if self.ui_elements.selectedImage == "Image1":
-            self.ui_elements.selectedImages[index] = 0
-        elif self.ui_elements.selectedImage == "Image2":
-            self.ui_elements.selectedImages[index] = 1
-        logger.info("Image Combobox {} has changed to {}".format(index+1, self.ui_elements.selectedImages[index]+1))
-        #print("Image Combobox {} has changed to {}".format(index+1, self.ui_elements.selectedImages[index]+1))
-        self.showOutput(self.Select_Output())
+    # def selectImage(self, index):
+    #     logger.debug("selecting image from which we choose the component")
+    #     self.mixing.selectedImage = self.mixing.img_slider_combos[index].currentText()
+    #     if self.mixing.selectedImage == "Image1":
+    #         self.mixing.selectedImages[index] = 0
+    #     elif self.mixing.selectedImage == "Image2":
+    #         self.mixing.selectedImages[index] = 1
+    #     logger.info("Image Combobox {} has changed to {}".format(index+1, self.mixing.selectedImages[index]+1))
+    #     #print("Image Combobox {} has changed to {}".format(index+1, self.mixing.selectedImages[index]+1))
+    #     self.showOutput(self.Select_Output())
 
-    def setFunctions(self, index):
+    # def setFunctions(self, index):
 
-        self.ui_elements.img_slider_combos[index].activated[str].connect(lambda: self.selectImage(index))
-        self.ui_elements.img_mixer_combos[index].activated[str].connect(lambda: self.selectComponent(index))
-        self.ui_elements.sliders[index].valueChanged.connect(lambda: self.sliderMoved(index))
-        self.ui_elements.sliders[index].sliderReleased.connect(lambda: self.sliderReleased(index))
-        self.ui_elements.Combo_output[0].activated[str].connect(lambda: self.showOutput(self.Select_Output()))
+    #     self.mixing.img_slider_combos[index].activated[str].connect(lambda: self.mixing.selectImage(index))
+    #     self.mixing.img_mixer_combos[index].activated[str].connect(lambda: self.mixing.selectComponent(index))
+    #     self.mixing.sliders[index].valueChanged.connect(lambda: self.mixing.sliderMoved(index))
+    #     self.mixing.sliders[index].sliderReleased.connect(lambda: self.mixing.sliderReleased(index))
+    #     self.mixing.Combo_output[0].activated[str].connect(lambda: self.mixing.showOutput(self.mixing.Select_Output()))
 
-    def sliderMoved(self, index):
-        logger.info("Slider {}, Value {}".format(index, self.ui_elements.sliders[index].value()))
-        #print("Slider {}, Value {}".format(index, self.ui_elements.sliders[index].value()))
-        self.ui_elements.scaleValues[index] = self.ui_elements.sliders[index].value()/100
-        #print(self.ui_elements.scaleValues[index])
-        self.ui_elements.sliders_txts[index].setText(str(self.ui_elements.sliders[index].value())+" %")
-        self.showOutput(self.Select_Output())
+    # def sliderMoved(self, index):
+    #     logger.info("Slider {}, Value {}".format(index, self.mixing.sliders[index].value()))
+    #     #print("Slider {}, Value {}".format(index, self.mixing.sliders[index].value()))
+    #     self.mixing.scaleValues[index] = self.mixing.sliders[index].value()/100
+    #     #print(self.mixing.scaleValues[index])
+    #     self.mixing.sliders_txts[index].setText(str(self.mixing.sliders[index].value())+" %")
+    #     self.showOutput(self.Select_Output())
 
-    def sliderReleased(self, index):
+    # def sliderReleased(self, index):
 
-        logger.info("Slider {} moved to {}%".format(index+1, self.ui_elements.sliders[index].value()))
-        scale1 = self.ui_elements.scaleValues[0]
-        scale2 = self.ui_elements.scaleValues[1]
-        comp1 = self.ui_elements.selectedComponents[0]
-        comp2 = self.ui_elements.selectedComponents[1]
-        index1 = self.ui_elements.selectedImages[0]
-        index2 = self.ui_elements.selectedImages[1]
-        logger.info("Mixing {} of {} of Image {} with {} of {} of Image {}".format(scale1, comp1, index1+1, scale2, comp2, index2+1))
+    #     logger.info("Slider {} moved to {}%".format(index+1, self.mixing.sliders[index].value()))
+    #     scale1 = self.mixing.scaleValues[0]
+    #     scale2 = self.mixing.scaleValues[1]
+    #     comp1 = self.mixing.selectedComponents[0]
+    #     comp2 = self.mixing.selectedComponents[1]
+    #     index1 = self.mixing.selectedImages[0]
+    #     index2 = self.mixing.selectedImages[1]
+    #     logger.info("Mixing {} of {} of Image {} with {} of {} of Image {}".format(scale1, comp1, index1+1, scale2, comp2, index2+1))
 
-    def selectComponent(self, index):
+    # def selectComponent(self, index):
 
-        selectedComponent = self.ui_elements.img_mixer_combos[index].currentText()
-        self.ui_elements.selectedComponents[index] = selectedComponent
-        if index == 0:
-            mixType = self.getAbbreviation(selectedComponent)
-            #print(mixType)
-            self.setSecondCompo(mixType)
-            self.ui_elements.selectedComponents[1] = self.ui_elements.img_mixer_combos[1].currentText()
-            self.ui_elements.sliders[1].setEnabled(True)
-        if selectedComponent == "Uni Mag" or selectedComponent == "Uni Phase":
-            self.ui_elements.sliders[index].setEnabled(False)
-        else:
-            self.ui_elements.sliders[index].setEnabled(True)
-        logger.debug("Component ComboBox {} of image {} changed to Image {}".format(index+1, self.ui_elements.selectedImages[index]+1, selectedComponent))
-        self.showOutput(self.Select_Output())
+    #     selectedComponent = self.mixing.img_mixer_combos[index].currentText()
+    #     self.mixing.selectedComponents[index] = selectedComponent
+    #     if index == 0:
+    #         mixType = self.getAbbreviation(selectedComponent)
+    #         #print(mixType)
+    #         self.setSecondCompo(mixType)
+    #         self.mixing.selectedComponents[1] = self.mixing.img_mixer_combos[1].currentText()
+    #         self.mixing.sliders[1].setEnabled(True)
+    #     if selectedComponent == "Uni Mag" or selectedComponent == "Uni Phase":
+    #         self.mixing.sliders[index].setEnabled(False)
+    #     else:
+    #         self.mixing.sliders[index].setEnabled(True)
+    #     logger.debug("Component ComboBox {} of image {} changed to Image {}".format(index+1, self.mixing.selectedImages[index]+1, selectedComponent))
+    #     self.showOutput(self.Select_Output())
 
-    def setComponentCompo(self, index, mixType):
-        logger.debug("adjusting items of combobox 2 according to component chosen in 1 ")
-        if index == 1:
-            self.setSecondCompo(mixType)
+    # def setComponentCompo(self, index, mixType):
+    #     logger.debug("adjusting items of combobox 2 according to component chosen in 1 ")
+    #     if index == 1:
+    #         self.setSecondCompo(mixType)
 
-    def clearCompo(self,index):
+    # def clearCompo(self,index):
 
-        logger.debug("clears the items of the combobox")
-        for i in range(self.ui_elements.img_mixer_combos[index].count()):
-            self.ui_elements.img_mixer_combos[index].removeItem(0)
+    #     logger.debug("clears the items of the combobox")
+    #     for i in range(self.mixing.img_mixer_combos[index].count()):
+    #         self.mixing.img_mixer_combos[index].removeItem(0)
 
-    def setSecondCompo(self, mixType):
-        logger.debug("Changing items of combobox 2 according to component chosen from combobox 1")
-        self.clearCompo(1)
-        if mixType == "m" or mixType == "um":
-            self.ui_elements.img_mixer_combos[1].addItem("Phase")
-            self.ui_elements.img_mixer_combos[1].addItem("Uni Phase")
+    # def setSecondCompo(self, mixType):
+    #     logger.debug("Changing items of combobox 2 according to component chosen from combobox 1")
+    #     self.clearCompo(1)
+    #     if mixType == "m" or mixType == "um":
+    #         self.mixing.img_mixer_combos[1].addItem("Phase")
+    #         self.mixing.img_mixer_combos[1].addItem("Uni Phase")
 
-        elif mixType == "p" or mixType == "up":
-            self.ui_elements.img_mixer_combos[1].addItem("Magnitude")
-            self.ui_elements.img_mixer_combos[1].addItem("Uni Mag")
+    #     elif mixType == "p" or mixType == "up":
+    #         self.mixing.img_mixer_combos[1].addItem("Magnitude")
+    #         self.mixing.img_mixer_combos[1].addItem("Uni Mag")
 
-        elif mixType == "r":
-            self.ui_elements.img_mixer_combos[1].addItem("Imaginary")
+    #     elif mixType == "r":
+    #         self.mixing.img_mixer_combos[1].addItem("Imaginary")
 
-        elif mixType == "i":
-            self.ui_elements.img_mixer_combos[1].addItem("Real")
+    #     elif mixType == "i":
+    #         self.mixing.img_mixer_combos[1].addItem("Real")
 
-    def getAbbreviation(self, comp):
-        if comp == "Magnitude":
-            mixType = "m"
-        elif comp == "Phase":
-            mixType = "p"
-        elif comp == "Real":
-            mixType = "r"
-        elif comp == "Imaginary":
-            mixType = "i"
-        elif comp == "Uni Mag":
-            mixType = "um"
-        elif comp == "Uni Phase":
-            mixType = "up"
-        return mixType
+    # def getAbbreviation(self, comp):
+    #     if comp == "Magnitude":
+    #         mixType = "m"
+    #     elif comp == "Phase":
+    #         mixType = "p"
+    #     elif comp == "Real":
+    #         mixType = "r"
+    #     elif comp == "Imaginary":
+    #         mixType = "i"
+    #     elif comp == "Uni Mag":
+    #         mixType = "um"
+    #     elif comp == "Uni Phase":
+    #         mixType = "up"
+    #     return mixType
 
 
-    def getMixers(self, image1, image2, mixType, scale):
-        logger.debug("checking the mixtype and scaling the component chosen")
-        if mixType == "m":
-            mixer = image1.magnitude * scale + image2.magnitude*(1-scale)
-        elif mixType == "um":
-            mixer = np.ones(image1.magnitude.shape)
-        elif mixType == "p":
-            mixer = image1.phase * scale + image2.phase * (1-scale)
-        elif mixType == "up":
-            mixer = np.zeros(image1.phase.shape)
-        elif mixType == "r":
-            mixer = image1.real * scale + image2.real * (1-scale)
-        elif mixType == "i":
-            mixer = image1.imaginary * scale + image2.imaginary * (1-scale)
-        return mixer
+    # def getMixers(self, image1, image2, mixType, scale):
+    #     logger.debug("checking the mixtype and scaling the component chosen")
+    #     if mixType == "m":
+    #         mixer = image1.magnitude * scale + image2.magnitude*(1-scale)
+    #     elif mixType == "um":
+    #         mixer = np.ones(image1.magnitude.shape)
+    #     elif mixType == "p":
+    #         mixer = image1.phase * scale + image2.phase * (1-scale)
+    #     elif mixType == "up":
+    #         mixer = np.zeros(image1.phase.shape)
+    #     elif mixType == "r":
+    #         mixer = image1.real * scale + image2.real * (1-scale)
+    #     elif mixType == "i":
+    #         mixer = image1.imaginary * scale + image2.imaginary * (1-scale)
+    #     return mixer
 
-    def multiplyMixers(self, mixer1, mixer2, mixType):
+    # def multiplyMixers(self, mixer1, mixer2, mixType):
 
-        logger.debug("combine the two mixers depending on the mixType")
-        if mixType == "m" or mixType == "um":
-            output = np.multiply(mixer1, np.exp(1j*mixer2))
-        elif mixType == "p" or mixType == "up":
-            output = np.multiply(mixer2, np.exp(1j*mixer1))
-        elif mixType == "r":
-            output = mixer1 + 1j*mixer2
-        elif mixType == "i":
-            output = mixer2 + 1j*mixer1
-        return output
+    #     logger.debug("combine the two mixers depending on the mixType")
+    #     if mixType == "m" or mixType == "um":
+    #         output = np.multiply(mixer1, np.exp(1j*mixer2))
+    #     elif mixType == "p" or mixType == "up":
+    #         output = np.multiply(mixer2, np.exp(1j*mixer1))
+    #     elif mixType == "r":
+    #         output = mixer1 + 1j*mixer2
+    #     elif mixType == "i":
+    #         output = mixer2 + 1j*mixer1
+    #     return output
 
-    def showOutput(self,index):
+    # def showOutput(self,index):
 
-        logger.debug("Showing output image ")
-        if self.images[0] != None and self.images[1] != None:
-            mixType1 = self.getAbbreviation(self.ui_elements.selectedComponents[0])
-            mixType2 = self.getAbbreviation(self.ui_elements.selectedComponents[1])
-            # print(mixType1, mixType2)
-            selected1 = self.ui_elements.selectedImages[0]
-            selected2 = self.ui_elements.selectedImages[1]
-            mixer1 = self.getMixers(self.images[selected1], self.images[selected2], mixType1,self.ui_elements.scaleValues[0])
-            mixer2 = self.getMixers(self.images[selected2], self.images[selected1], mixType2,self.ui_elements.scaleValues[1])
-            result = self.multiplyMixers(mixer1, mixer2, mixType1)
-            imagedata = np.abs(np.fft.ifft2(result))
-            self.show_result(self.ui_elements.outputs[index],imagedata)
+    #     logger.debug("Showing output image ")
+    #     if self.images[0] != None and self.images[1] != None:
+    #         mixType1 = self.getAbbreviation(self.mixing.selectedComponents[0])
+    #         mixType2 = self.getAbbreviation(self.mixing.selectedComponents[1])
+    #         # print(mixType1, mixType2)
+    #         selected1 = self.mixing.selectedImages[0]
+    #         selected2 = self.mixing.selectedImages[1]
+    #         mixer1 = self.getMixers(self.images[selected1], self.images[selected2], mixType1,self.mixing.scaleValues[0])
+    #         mixer2 = self.getMixers(self.images[selected2], self.images[selected1], mixType2,self.mixing.scaleValues[1])
+    #         result = self.multiplyMixers(mixer1, mixer2, mixType1)
+    #         self.image_test.img_data= np.abs(np.fft.ifft2(result))
+    #         self.image_test.show(self.mixing.outputs[index],self.image_test.img_data)
+    #         #imagedata = np.abs(np.fft.ifft2(result))
+    #         #self.show_result(self.mixing.outputs[index],imagedata)
             
-    def Select_Output(self):
-        logger.debug("Where to show the output")
+    # def Select_Output(self):
+    #     logger.debug("Where to show the output")
         
-        if self.ui_elements.Combo_output[0].currentText() =="Output1" :
-            output_result= 0
-            #print("Output1")
-        elif self.ui_elements.Combo_output[0].currentText() =="Output2" :
-            output_result =1 
-            #print("Output2")
-        return output_result
-
-    def show_result(self,plot,data):
-        self.plot=plot
-        self.plot.clear()
-        self.plot.invertY(True)
-        self.image_item = pg.ImageItem(data.T)
-        self.plot.addItem(self.image_item)
-        self.plot.setXRange(min=0, max=data.shape[0], padding=0)
-        self.plot.setYRange(min=0, max=data.shape[1], padding=0)
-        self.plot.autoRange(padding=0)
+    #     if self.mixing.Combo_output[0].currentText() =="Output1" :
+    #         output_result= 0
+    #         #print("Output1")
+    #     elif self.mixing.Combo_output[0].currentText() =="Output2" :
+    #         output_result =1 
+    #         #print("Output2")
+    #     return output_result
+    
+    # # def show_result(self,plot,data):
+    # #     self.plot=plot
+    # #     self.plot.clear()
+    # #     self.plot.invertY(True)
+    # #     self.image_item = pg.ImageItem(data.T)
+    # #     self.plot.addItem(self.image_item)
+    # #     self.plot.setXRange(min=0, max=data.shape[0], padding=0)
+    # #     self.plot.setYRange(min=0, max=data.shape[1], padding=0)
+    # #     self.plot.autoRange(padding=0)
 
 if __name__ == "__main__":
     
