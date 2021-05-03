@@ -1,12 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 import lib
+
 
 
 test_signals = []
 sizes = []
 errors = []
-time=[]
+time_fft=[]
+time_dft=[]
+
+
 
 
 def sample_signals(n):
@@ -22,36 +27,41 @@ def calculate_errors(arr1,arr2):
     mse = np.square(arr1.view('complex') - arr2.view('complex')).mean()
     errors.append(np.abs(mse))
 
+
 def plot_errors():
+    plt.figure(1)
     plt.plot(sizes, errors)
-    plt.show()
+    
 
 def plot_complexity():
+    plt.figure(2)
+    plt.plot(sizes, time_fft)
+    #plt.plot(sizes, time_dft)
+    plt.legend(["FFT", "DFT"])
+    plt.show()
 
 
 
 
 def main():
-    sample_signals(10)
-
-    # fft = np.fft.fft(test_signals[0])
-    # #print(fft)
-    # dft = lib.dft(test_signals[0])
-    # #print(dft)
-    # # calculate_errors(fft, np.array(dft , dtype=np.complex128))
-    # calculate_errors(fft, dft)
+    sample_signals(13)
 
     for signal in test_signals:
-        fft = np.fft.fft(signal)
-        #print(fft)
+        start = time.time()
+        fft = lib.fft(signal)
+        end = time.time()
+        time_fft.append(end-start)
+
+        start = time.time()
         dft = lib.dft(signal)
-        #print(dft)
-        # calculate_errors(fft, np.array(dft , dtype=np.complex128))
+        end = time.time()
+        time_dft.append(end-start)
+
         calculate_errors(fft, dft)
         print("+")
 
     plot_errors()
-
+    plot_complexity()
 
 
 
