@@ -1,0 +1,17 @@
+comboBox_components2  7agat image 2 (real , phase,..)
+comboBox_components1  7agat image 1 (real , phase,..)
+Mixer_components2  7agat image 2 3nd el sliders
+Mixer_components1  7agat image 1 3nd el sliders
+Img_compo2 image 1 wala 2 3nd slider el tany 
+Img_compo1 image 1 wala 2 3nd slider el awlany
+comboBox_outputs keda sh8alen 3ala enhy output  
+
+original_1
+original_2
+
+components_p1
+components_p2
+
+
+output1
+output2
