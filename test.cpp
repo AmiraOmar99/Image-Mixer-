@@ -102,29 +102,6 @@ void fft2(Complex x[], int N)
 	}
 }
 
-// Cooley–Tukey FFT (in-place)
-void fft(CArray& x)
-{
-	const size_t N = x.size();
-	if (N <= 1) return;
-
-	// divide
-	CArray even = x[std::slice(0, N/2, 2)];
-	CArray  odd = x[std::slice(1, N/2, 2)];
-
-	// conquer
-	fft(even);
-	fft(odd);
-
-	// combine
-	for (size_t k = 0; k < N/2; ++k)
-	{
-		Complex t = std::polar(1.0, -2 * PI * k / N) * odd[k];
-		x[k    ] = even[k] + t;
-		x[k+N/2] = even[k] - t;
-	}
-}
-
 
 
 int main()
@@ -136,21 +113,21 @@ int main()
     // Complex test2[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
     // fft2(test2, 8);
 
-    int N = 1024;
-    double Ts = 1.0/N;
-    double t[10241];
-    double x[10241];
-    double y[10241];
-    Complex W [10241];
-    for(int i = 0; i < 10241; i++)
-    {
-        t[i] = i * Ts;
-        x[i] = 1 * cos(2*PI*500*t[i]);
-        y[i] = 0 * sin(2*PI*3*t[i]);
-        W[i] = std::complex<double> (x[i],-y[i]);
-    }
-    Complex out[10241];
-    dft(W,10241,out);
+    // int N = 1024;
+    // double Ts = 1.0/N;
+    // double t[10241];
+    // double x[10241];
+    // double y[10241];
+    // Complex W [10241];
+    // for(int i = 0; i < 10241; i++)
+    // {
+    //     t[i] = i * Ts;
+    //     x[i] = 1 * cos(2*PI*500*t[i]);
+    //     y[i] = 0 * sin(2*PI*3*t[i]);
+    //     W[i] = std::complex<double> (x[i],-y[i]);
+    // }
+    // Complex out[10241];
+    // dft(W,10241,out);
 
     // std::cout << (1.0/N) *out[500]<< std::endl;
 
@@ -158,11 +135,11 @@ int main()
         // std::cout << out[i] << std::endl;
 
     // std::cout << data[1] << std::endl;
-    // std::complex<double> signal[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
+    std::complex<double> signal[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
 
-    // std::complex<double> out[] = {1,1,1,1,1,1,1,1};
+    std::complex<double> out[] = {1,1,1,1,1,1,1,1};
 
-    // dft(signal,8, out);
+    dft(signal,8, out);
 
     // std::complex<double> signal[]={ 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0 };
     // std::complex<double> out[] = {1,1,1,1,1,1,1,1};
@@ -174,13 +151,13 @@ int main()
 
 
 
-    // for(int i = 0; i < 8; i++)
-    // {
-    //     std::cout << "OUTPUT" << std::endl;
+    for(int i = 0; i < 8; i++)
+    {
+        std::cout << out[i] << std::endl;
 
     //     std::cout << out1[i] << std::endl;
     //     std::cout << test2[i] << std::endl;
-    // }
+    }
 
 
 
