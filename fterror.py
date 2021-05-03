@@ -6,6 +6,7 @@ import lib
 test_signals = []
 sizes = []
 errors = []
+time=[]
 
 
 def sample_signals(n):
@@ -24,6 +25,9 @@ def calculate_errors(arr1,arr2):
 def plot_errors():
     plt.plot(sizes, errors)
     plt.show()
+
+def plot_complexity():
+
 
 
 
