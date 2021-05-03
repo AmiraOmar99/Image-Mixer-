@@ -14,7 +14,7 @@ typedef std::complex<double> Complex;
 typedef std::valarray<Complex> CArray;
 
 
-
+// construct the frequency matrix
 std::vector<std::vector<std::complex<double>>> construct_mat(int N) {
     std::vector<std::vector<std::complex<double>>> freq_matrix(N, std::vector<std::complex<double>>(N));
 
@@ -34,18 +34,17 @@ std::vector<std::vector<std::complex<double>>> construct_mat(int N) {
     return freq_matrix;
 }
 
-    
-void dft(std::complex<double> signal[], int size, std::complex<double> output[])
-{
-    std::complex<double>* signal_dft = (std::complex<double>*) malloc(size * sizeof(std::complex<double>)); 
 
+// dft using the freq matrix    
+void dft(std::complex<double> signal[], int size, std::complex<double> signal_dft[])
+{
     std::vector<std::vector<std::complex<double>>>freq_mat = construct_mat(size);
 
     for (int i = 0; i < size; i++) {
+        signal_dft[i] = 0;
         for (int j = 0; j < size; j++) {
             signal_dft[i] = signal_dft[i] + (signal[j] * freq_mat[i][j]);
         }
-        output[i] = signal_dft[i];
     }
 
 }
@@ -67,9 +66,22 @@ void dft2(std::complex<double> signal[], int size, std::complex<double> output[]
 
 }
 
+// get the real or imag part
+void dft_part(std::complex<double> signal[], int size, double output[], bool real = 1, bool imag = 0)
+{
+    std::complex<double> signal_dft[size];
+    dft(signal, size, signal_dft);
+    for(int i = 0; i < size; i++)
+    {
+        if(imag)
+            output[i] = signal_dft[i].imag();
+        else
+            output[i] = signal_dft[i].real();
+    }
+}
 
 // Cooley–Tukey FFT (in-place)
-void fft2(Complex x[], int N) 
+void fft(Complex x[], int N) 
 {
 	// const size_t N = x.size();
 	if (N <= 1) return;
@@ -90,8 +102,8 @@ void fft2(Complex x[], int N)
     } 
 
 	// conquer
-	fft2(even, N/2);
-	fft2(odd, N/2 + (N%2));
+	fft(even, N/2);
+	fft(odd, N/2 + (N%2));
 
 	// combine
 	for (size_t k = 0; k < N/2; ++k)
@@ -100,13 +112,27 @@ void fft2(Complex x[], int N)
 		x[k    ] = even[k] + t;
 		x[k+N/2] = even[k] - t;
 	}
+
+}
+
+
+void fft_part (Complex x[], int N, double output[], bool real = 1, bool imag = 0)
+{  
+   fft(x,N);
+   for (int i = 0; i < N; i++)
+	{   
+        if(imag)
+		    output[i] = x[i].imag();
+        else
+            output[i] = x[i].real();
+	}
 }
 
 
 
 int main()
 {
-    // Complex test[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
+    // Complex tesst[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
     // CArray out1(test, 8);
 	// fft(out1); //complex_numbers
 
@@ -139,7 +165,8 @@ int main()
 
     std::complex<double> out[] = {1,1,1,1,1,1,1,1};
 
-    dft(signal,8, out);
+    // dft(signal,8, out);
+    fft(signal, 8);
 
     // std::complex<double> signal[]={ 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0 };
     // std::complex<double> out[] = {1,1,1,1,1,1,1,1};
@@ -153,13 +180,23 @@ int main()
 
     for(int i = 0; i < 8; i++)
     {
-        std::cout << out[i] << std::endl;
+        std::cout << signal[i] << std::endl;
 
     //     std::cout << out1[i] << std::endl;
     //     std::cout << test2[i] << std::endl;
     }
+    double out2[] = {1,1,1,1,1,1,1,1};
+    std::complex<double> signal2[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
 
+    fft_part(signal2, 8, out2);
 
+    for(int i = 0; i < 8; i++)
+    {
+        std::cout << out2[i] << std::endl;
+
+    //     std::cout << out1[i] << std::endl;
+    //     std::cout << test2[i] << std::endl;
+    }
 
 //     double* real = dft_real(signal,10);
 //     double* imag = dft_imag(signal,10);

@@ -9,8 +9,8 @@ lib.dft.argtypes = [np.ctypeslib.ndpointer(ctypes.c_double, flags="C_CONTIGUOUS"
 # lib.dft.argtypes = [np.ctypeslib.ndpointer(np.complex64, flags="C_CONTIGUOUS"), ctypes.c_int, np.ctypeslib.ndpointer(np.complex64, flags="C_CONTIGUOUS")]
 
 
-lib.fft2.restype = None	
-lib.fft2.argtypes = [np.ctypeslib.ndpointer(ctypes.c_double, flags="C_CONTIGUOUS"), ctypes.c_int]
+lib.fft.restype = None	
+lib.fft.argtypes = [np.ctypeslib.ndpointer(ctypes.c_double, flags="C_CONTIGUOUS"), ctypes.c_int]
 # l = [1,1,1,1,1,1,1,1,1,1]
 # signal = np.arange(1.0, 11, 1, np.float64)
 # signal = np.array(l,np.float64)
