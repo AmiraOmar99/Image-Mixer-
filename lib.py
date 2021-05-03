@@ -53,8 +53,10 @@ def complex_check(l):
 
 def to_complex(arr):
     for element in arr:
-        element = element[0] + 1j * element[1]
         print(element)
+        element = element[0] + 1j * element[1]
+        #print(element)
+    print(arr)
     return arr
 
 
@@ -62,7 +64,7 @@ def dft(signal):
     signal = complex_check(signal)
     output = np.copy(signal)
     lib.dft(signal, len(signal), output)
-    # output = to_complex(output)
+    #output = to_complex(output)
     return output
 
 def rdft(signal):
@@ -96,22 +98,27 @@ def ifft(signal):
     return output
 
 
-# test = np.array([1. + 0.j, 0 + 1.j, 2 + 2.j, 2 + 1.j ])
+# test2 = np.array([1. + 0.j, 0 + 1.j, 2 + 2.j, 2 + 1.j ])
+# test2 = list(test2)
 # test2 = [1. + 0.j, 0 + 1.j, 2 + 2.j, 2 + 1.j ]
 
 # b = complex_check(test2)
 # print(b)
-test2 = [1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0]
+
+# test2 = np.array([1.5,70.0,81.0,90.5,0.0,2.0,15.7,0.0 ])
+#test2 = list(test2)
+
+# test2 = [1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0]
 
 
-f = np.fft.fft(test2)
-print("np fft")
-print(f)
-# print(len(f))
+# f = np.fft.fft(test2)
+# print("np fft")
+# print(f)
 
-print("dft")
-df = dft(test2)
-print(df)
+# print("dft")
+# df = dft(test2)
+# print(df)
+
 
 # to_complex(df)
 # print("real")
