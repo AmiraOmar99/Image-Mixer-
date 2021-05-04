@@ -516,3 +516,14 @@ class Ui_MainWindow(object):
         self.Mixer_components2_2.setItemText(5, _translate("MainWindow", "Uni Phase"))
         self.label_out1_2.setText(_translate("MainWindow", "Output 1"))
 from pyqtgraph import PlotWidget
+
+
+if __name__ == "__main__":
+    import sys
+    
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    main = Ui_MainWindow()
+    main.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
