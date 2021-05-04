@@ -130,90 +130,20 @@ void fft_part (Complex x[], int N, double output[], bool real = 1, bool imag = 0
 
 
 
-int main()
-{
-    // Complex tesst[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
-    // CArray out1(test, 8);
-	// fft(out1); //complex_numbers
+// int main()
+// {
+//     std::complex<double> signal[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
 
-    // Complex test2[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
-    // fft2(test2, 8);
+//     std::complex<double> out[8];
 
-    // int N = 1024;
-    // double Ts = 1.0/N;
-    // double t[10241];
-    // double x[10241];
-    // double y[10241];
-    // Complex W [10241];
-    // for(int i = 0; i < 10241; i++)
-    // {
-    //     t[i] = i * Ts;
-    //     x[i] = 1 * cos(2*PI*500*t[i]);
-    //     y[i] = 0 * sin(2*PI*3*t[i]);
-    //     W[i] = std::complex<double> (x[i],-y[i]);
-    // }
-    // Complex out[10241];
-    // dft(W,10241,out);
+//     dft(signal,8, out);
+//     fft(signal, 8);
 
-    // std::cout << (1.0/N) *out[500]<< std::endl;
+//     for(int i = 0; i < 8; i++)
+//     {
+//         std::cout << signal[i] << std::endl;
+//         std::cout << out[i] << std::endl;
+//     }
 
-    // for(int i = 0; i < 10241;i++)
-        // std::cout << out[i] << std::endl;
-
-    // std::cout << data[1] << std::endl;
-    std::complex<double> signal[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
-
-    std::complex<double> out[] = {1,1,1,1,1,1,1,1};
-
-    // dft(signal,8, out);
-    fft(signal, 8);
-
-    // std::complex<double> signal[]={ 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0 };
-    // std::complex<double> out[] = {1,1,1,1,1,1,1,1};
-    // std::complex<double> out1[8];
-    // std::complex<double> out2[8];
-
-    // dft2(signal,8, out2);
-
-
-
-
-    for(int i = 0; i < 8; i++)
-    {
-        std::cout << signal[i] << std::endl;
-
-    //     std::cout << out1[i] << std::endl;
-    //     std::cout << test2[i] << std::endl;
-    }
-    double out2[] = {1,1,1,1,1,1,1,1};
-    std::complex<double> signal2[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
-
-    fft_part(signal2, 8, out2);
-
-    for(int i = 0; i < 8; i++)
-    {
-        std::cout << out2[i] << std::endl;
-
-    //     std::cout << out1[i] << std::endl;
-    //     std::cout << test2[i] << std::endl;
-    }
-
-//     double* real = dft_real(signal,10);
-//     double* imag = dft_imag(signal,10);
-// // 
-//     std::cout << real[1] << std::endl;
-    // std::cout << imag[1] << std::endl;  
-
-    // std::cout << real[5] << std::endl;
-    // std::cout << imag[5] << std::endl;
-
-
-    // const Complex test[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0 };
-    // CArray data(test, 8);
-	// fft(data); //complex_numbers
-
-    // std::cout << data[1] << std::endl;
-
-
-}
+// }
 }
