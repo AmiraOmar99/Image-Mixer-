@@ -65,17 +65,18 @@ class Mixer():
 
 
     def select_component(self, index):
-        self.selected_components[index] = self.win.ui_elements.img_mixer_combos[index].currentText() 
+        #selected_components = self.win.ui_elements.img_mixer_combos[index].currentText() 
+        self.selected_components [index] = self.win.ui_elements.img_mixer_combos[index].currentText() 
         if index == 0:
             self.mix_types[0] = self.get_abbreviation(self.selected_components[index])
             self.set_second_compo(self.mix_types[0])
             self.selected_components[1] = self.win.ui_elements.img_mixer_combos[1].currentText()
             self.win.ui_elements.sliders[1].setEnabled(True)
-        if self.selected_component == "Uni Mag" or self.selected_component == "Uni Phase":
+        if self.selected_components [index]== "Uni Mag" or self.selected_components [index] == "Uni Phase":
             self.win.ui_elements.sliders[index].setEnabled(False)
         else:
             self.win.ui_elements.sliders[index].setEnabled(True)
-        logger.debug("Component ComboBox {} of image {} changed to Image {}".format(index+1, self.selected_images[index]+1, selected_component))
+        logger.debug("Component ComboBox {} of image {} changed to Image {}".format(index+1, self.selected_images[index]+1, self.selected_components [index]))
         self.show_output()
 
 
