@@ -5,22 +5,22 @@ import numpy as np
 lib = ctypes.CDLL('./lib.so')
 
 # dft function
-#lib.dft.restype = None	
-#lib.dft.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C")]
+lib.dft.restype = None	
+lib.dft.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C")]
 
 
 # dft parts function (real, imag)
-#lib.dft_part.restype = None	
-#lib.dft_part.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C"), ctypes.c_bool, ctypes.c_bool]
+lib.dft_part.restype = None	
+lib.dft_part.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C"), ctypes.c_bool, ctypes.c_bool]
 
 
 # fft function
-#lib.fft.restype = None	
-#lib.fft.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int]
+lib.fft.restype = None	
+lib.fft.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int]
 
 # fft parts function
-#lib.fft_part.restype = None	
-#lib.fft_part.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C"), ctypes.c_bool, ctypes.c_bool]
+lib.fft_part.restype = None	
+lib.fft_part.argtypes = [np.ctypeslib.ndpointer( flags="C"), ctypes.c_int, np.ctypeslib.ndpointer(flags="C"), ctypes.c_bool, ctypes.c_bool]
 
 
 
@@ -101,17 +101,17 @@ def ifft(signal):
 
 # b = complex_check(test2)
 # print(b)
-test2 = [1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0]
+# test2 = [1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0]
 
 
-f = np.fft.fft(test2)
-print("np fft")
-print(f)
-# print(len(f))
+# f = np.fft.fft(test2)
+# print("np fft")
+# print(f)
+# # print(len(f))
 
-print("dft")
-df = dft(test2)
-print(df)
+# print("dft")
+# df = dft(test2)
+# print(df)
 
 # to_complex(df)
 # print("real")

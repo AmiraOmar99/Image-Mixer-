@@ -36,7 +36,7 @@ def plot_errors():
 def plot_complexity():
     plt.figure(2)
     plt.plot(sizes, time_fft)
-    #plt.plot(sizes, time_dft)
+    plt.plot(sizes, time_dft)
     plt.legend(["FFT", "DFT"])
     plt.show()
 
@@ -44,7 +44,7 @@ def plot_complexity():
 
 
 def main():
-    sample_signals(13)
+    sample_signals(14)
 
     for signal in test_signals:
         start = time.time()

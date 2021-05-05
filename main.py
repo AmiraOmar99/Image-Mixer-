@@ -11,6 +11,7 @@ import logging
 
 #Create and configure logger
 logging.basicConfig(filename="logging.log", format='%(asctime)s %(message)s',filemode='w')
+
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
@@ -20,7 +21,6 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.ui_elements = Ui(self)
-        
         self.showMaximized()
         self.show()
         self.images = {0: None, 1:None} 
@@ -79,9 +79,9 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 msg.setText('Error: please select an image of the same size as the other opened image')
                 msg.setIcon(PyQt5.QtWidgets.QMessageBox.Critical)
                 msg.exec_()
-                self.logger.ERROR("Not Same Size")
+                logger.ERROR("Not Same Size")
         else:
-            self.logger.debug("canceled")
+            logger.debug("canceled")
 
         self.check_opened()
          
@@ -90,7 +90,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         logger.debug('check image {} size '.format(index+1))
         #check if there is more than one image opened , if same size return 1
         if self.size:
-            if (index == 0 and self.ui_elements.images[1]) or (index == 1 and self.ui_elements.images[0]):
+            if (index == 0 and self.images[1]) or (index == 1 and self.images[0]):
                 logger.debug("there is another image obened")
                 if image.img_shape == self.size:
                     logger.debug("same size")
