@@ -1,2 +1,26 @@
-2021-05-05 03:53:54,563 Program Execution
-2021-05-05 03:53:54,563 UI_MainWindow
+2021-05-05 14:36:13,021 Program Execution
+2021-05-05 14:36:13,021 UI_MainWindow
+2021-05-05 14:36:13,422 UI Elements
+2021-05-05 14:36:14,777 open image 1
+2021-05-05 14:36:18,452 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/boat.png
+2021-05-05 14:36:18,460 image shape is(512, 512)
+2021-05-05 14:36:18,525 check image 1 size 
+2021-05-05 14:36:18,525 image size is(512, 512)
+2021-05-05 14:36:18,525 opened
+2021-05-05 14:36:18,527 plotting Magnitude of image 1
+2021-05-05 14:36:18,529 Checking if the user opens the 2 images
+2021-05-05 14:36:20,045 open image 2
+2021-05-05 14:36:21,006 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/Icon_Bird_512x512.png
+2021-05-05 14:36:21,008 image shape is(512, 512)
+2021-05-05 14:36:21,065 check image 2 size 
+2021-05-05 14:36:21,066 no other image
+2021-05-05 14:36:21,066 opened
+2021-05-05 14:36:21,069 plotting Magnitude of image 2
+2021-05-05 14:36:21,071 Checking if the user opens the 2 images
+2021-05-05 14:36:21,072 Showing output image 
+2021-05-05 14:36:21,072 Where to show the output
+2021-05-05 14:36:21,072 checking the mixtype and scaling the component chosen
+2021-05-05 14:36:21,075 checking the mixtype and scaling the component chosen
+2021-05-05 14:36:21,078 combine the two mixers depending on the mixType
+2021-05-05 14:36:24,021 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:36:24,021 clears the items of the combobox

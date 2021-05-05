@@ -65,11 +65,11 @@ class Mixer():
 
 
     def select_component(self, index):
-        self.selected_components[index] = self.img_mixer_combos[index].currentText() 
+        self.selected_components[index] = self.win.ui_elements.img_mixer_combos[index].currentText() 
         if index == 0:
             self.mix_types[0] = self.get_abbreviation(self.selected_components[index])
             self.set_second_compo(self.mix_types[0])
-            self.selected_components[1] = self.img_mixer_combos[1].currentText()
+            self.selected_components[1] = self.win.ui_elements.img_mixer_combos[1].currentText()
             self.win.ui_elements.sliders[1].setEnabled(True)
         if selected_component == "Uni Mag" or selected_component == "Uni Phase":
             self.win.ui_elements.sliders[index].setEnabled(False)
@@ -99,7 +99,7 @@ class Mixer():
 
     def clear_compo(self,index):
         logger.debug("clears the items of the combobox")
-        for i in range(self.img_mixer_combos[index].count()):
+        for i in range(self.win.ui_elements.img_mixer_combos[index].count()):
             self.win.ui_elements.img_mixer_combos[index].removeItem(0)
 
 
