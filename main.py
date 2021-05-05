@@ -47,10 +47,13 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
 
 
     def check_opened(self):
-        logger.debug("Checking if the user opens the 2 images")
-        if self.images[0] != None and self.images[1] != None:
-            # create mixer object
-            self.mixer = Mixer(self) # pass self (main object) to mixer
+        if self.mixer == None:
+            logger.debug("Checking if the user opens the 2 images")
+            if self.images[0] != None and self.images[1] != None:
+                # create mixer object
+                self.mixer = Mixer(self) # pass self (main object) to mixer
+        else:
+            self.mixer.update()
             
 
         

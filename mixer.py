@@ -26,6 +26,9 @@ class Mixer():
             self.set_connections(i)
         
         self.show_output()
+    
+    def update(self):
+        self.show_output()
 
     def set_connections(self, index):
         self.win.ui_elements.img_slider_combos[index].activated[str].connect(lambda: self.select_image(index))
