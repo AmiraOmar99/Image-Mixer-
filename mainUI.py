@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_21.sizePolicy().hasHeightForWidth())
         self.frame_21.setSizePolicy(sizePolicy)
         # self.frame_21.setMinimumSize(QtCore.QSize(820, 430))
-        self.frame_21.setGeometry(QtCore.QRect(820, 1, 820, 431))
+        # self.frame_21.setGeometry(QtCore.QRect(820, 1, 820, 431))
         self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_21.setFrameStyle(QtWidgets.QFrame.Panel | QtWidgets.QFrame.Raised)
