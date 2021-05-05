@@ -609,16 +609,16 @@ class Ui_MainWindow(object):
         self.comboBox_components2.setItemText(3, QCoreApplication.translate("MainWindow", u"Imaginary", None))
 
         self.label_out1.setText(QCoreApplication.translate("MainWindow", u"Output 1", None))
-        self.label_out2.setText(QCoreApplication.translate("MainWindow", u"Output 1", None))
+        self.label_out2.setText(QCoreApplication.translate("MainWindow", u"Output 2", None))
     # retranslateUi
 
-if __name__ == "__main__":
-    import sys
+# if __name__ == "__main__":
+#     import sys
     
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    main = Ui_MainWindow()
-    main.setupUi(MainWindow)
-    MainWindow.showMaximized()
-    MainWindow.show()
-    sys.exit(app.exec_())
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     main = Ui_MainWindow()
+#     main.setupUi(MainWindow)
+#     MainWindow.showMaximized()
+#     MainWindow.show()
+#     sys.exit(app.exec_())
