@@ -163,7 +163,7 @@ class Mixer():
             self.mixers[i]=self.get_mixers(self.win.images[self.selected_images[i]], self.win.images[self.selected_images[1-i]], self.mix_types[i],self.scale_values[i])
 
         result = self.multiply_mixers(self.mixers[0], self.mixers[1], self.mix_types[0])
-        self.outputs[index].img_data= np.abs(np.fft.ifft2(result))
+        self.outputs[index].img_data= np.fft.ifft2(result).real
         self.outputs[index].show(self.win.ui_elements.outputs[index],self.outputs[index].img_data)
 
             

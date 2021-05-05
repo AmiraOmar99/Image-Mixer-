@@ -63,10 +63,12 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         img_path = PyQt5.QtWidgets.QFileDialog.getOpenFileName(None, 'open image', None, "PNG *.png;; JPG *.jpg")[0]
         if img_path:
             logger.info('Opening image : '+ img_path )
-            self.images[index]= Image()
-            self.images[index].read(img_path)
+            image= Image()
+            image.read(img_path)
             #check size
-            if self.size_check(self.images[index],index):
+            if self.size_check(image,index):
+                self.images[index]=image
+                self.size = image.img_shape #if only one image save size
                 logger.debug("opened")
                 #show original image and its combonents
                 self.images[index].show(self.ui_elements.originals[index],self.images[index].img_data)
@@ -74,22 +76,20 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 self.ui_elements.img_combos[index].setEnabled(True)
 
             else:
-                del self.images[index]
-                self.images[index]=None
                 logger.debug('Not same size')
                 msg = PyQt5.QtWidgets.QMessageBox()
                 msg.setWindowTitle('ERROR')
                 msg.setText('Error: please select an image of the same size as the other opened image')
                 msg.setIcon(PyQt5.QtWidgets.QMessageBox.Critical)
                 msg.exec_()
-                logger.ERROR("Not Same Size")
+                #logger.ERROR("Not Same Size")
         else:
             logger.debug("canceled")
 
         self.check_opened()
          
 
-    def size_check(self,image,index):
+    def size_check(self,image,index ):
         logger.debug('check image {} size '.format(index+1))
         #check if there is more than one image opened , if same size return 1
         if self.size:
@@ -107,7 +107,6 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
                 return 1
             
         else:
-            self.size = image.img_shape #if only one image save size
             logger.debug('image size is'+str(self.size))
             return 1 
 
