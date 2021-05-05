@@ -1,26 +1,876 @@
-2021-05-05 14:36:13,021 Program Execution
-2021-05-05 14:36:13,021 UI_MainWindow
-2021-05-05 14:36:13,422 UI Elements
-2021-05-05 14:36:14,777 open image 1
-2021-05-05 14:36:18,452 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/boat.png
-2021-05-05 14:36:18,460 image shape is(512, 512)
-2021-05-05 14:36:18,525 check image 1 size 
-2021-05-05 14:36:18,525 image size is(512, 512)
-2021-05-05 14:36:18,525 opened
-2021-05-05 14:36:18,527 plotting Magnitude of image 1
-2021-05-05 14:36:18,529 Checking if the user opens the 2 images
-2021-05-05 14:36:20,045 open image 2
-2021-05-05 14:36:21,006 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/Icon_Bird_512x512.png
-2021-05-05 14:36:21,008 image shape is(512, 512)
-2021-05-05 14:36:21,065 check image 2 size 
-2021-05-05 14:36:21,066 no other image
-2021-05-05 14:36:21,066 opened
-2021-05-05 14:36:21,069 plotting Magnitude of image 2
-2021-05-05 14:36:21,071 Checking if the user opens the 2 images
-2021-05-05 14:36:21,072 Showing output image 
-2021-05-05 14:36:21,072 Where to show the output
-2021-05-05 14:36:21,072 checking the mixtype and scaling the component chosen
-2021-05-05 14:36:21,075 checking the mixtype and scaling the component chosen
-2021-05-05 14:36:21,078 combine the two mixers depending on the mixType
-2021-05-05 14:36:24,021 Changing items of combobox 2 according to component chosen from combobox 1
-2021-05-05 14:36:24,021 clears the items of the combobox
+2021-05-05 14:37:41,871 Program Execution
+2021-05-05 14:37:41,871 UI_MainWindow
+2021-05-05 14:37:42,231 UI Elements
+2021-05-05 14:37:44,621 open image 1
+2021-05-05 14:37:49,712 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/boat.png
+2021-05-05 14:37:49,719 image shape is(512, 512)
+2021-05-05 14:37:49,783 check image 1 size 
+2021-05-05 14:37:49,783 image size is(512, 512)
+2021-05-05 14:37:49,783 opened
+2021-05-05 14:37:49,787 plotting Magnitude of image 1
+2021-05-05 14:37:49,789 Checking if the user opens the 2 images
+2021-05-05 14:37:50,822 open image 2
+2021-05-05 14:37:51,781 Opening image : C:/Users/nkhal/Downloads/FT-magnitude-phase-master/FT-magnitude-phase-master/images/Icon_Bird_512x512.png
+2021-05-05 14:37:51,783 image shape is(512, 512)
+2021-05-05 14:37:51,850 check image 2 size 
+2021-05-05 14:37:51,851 no other image
+2021-05-05 14:37:51,851 opened
+2021-05-05 14:37:51,853 plotting Magnitude of image 2
+2021-05-05 14:37:51,855 Checking if the user opens the 2 images
+2021-05-05 14:37:51,855 Showing output image 
+2021-05-05 14:37:51,855 Where to show the output
+2021-05-05 14:37:51,855 checking the mixtype and scaling the component chosen
+2021-05-05 14:37:51,858 checking the mixtype and scaling the component chosen
+2021-05-05 14:37:51,863 combine the two mixers depending on the mixType
+2021-05-05 14:37:55,283 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:37:55,284 clears the items of the combobox
+2021-05-05 14:37:57,223 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:37:57,223 clears the items of the combobox
+2021-05-05 14:37:59,319 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:37:59,319 clears the items of the combobox
+2021-05-05 14:38:01,509 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:38:01,510 clears the items of the combobox
+2021-05-05 14:38:03,700 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:38:03,700 clears the items of the combobox
+2021-05-05 14:38:05,964 selecting image from which we choose the component
+2021-05-05 14:38:05,965 Image Combobox 1 has changed to 2
+2021-05-05 14:38:05,965 Showing output image 
+2021-05-05 14:38:05,965 Where to show the output
+2021-05-05 14:38:05,966 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:05,968 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:05,973 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,308 Slider 1, Value 52
+2021-05-05 14:38:09,308 Mixing 0.52 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,309 Showing output image 
+2021-05-05 14:38:09,309 Where to show the output
+2021-05-05 14:38:09,310 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,312 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,319 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,363 Slider 1, Value 65
+2021-05-05 14:38:09,363 Mixing 0.65 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,363 Showing output image 
+2021-05-05 14:38:09,363 Where to show the output
+2021-05-05 14:38:09,363 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,364 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,367 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,411 Slider 1, Value 76
+2021-05-05 14:38:09,411 Mixing 0.76 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,411 Showing output image 
+2021-05-05 14:38:09,411 Where to show the output
+2021-05-05 14:38:09,411 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,412 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,416 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,459 Slider 1, Value 84
+2021-05-05 14:38:09,460 Mixing 0.84 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,460 Showing output image 
+2021-05-05 14:38:09,460 Where to show the output
+2021-05-05 14:38:09,460 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,460 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,465 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,506 Slider 1, Value 89
+2021-05-05 14:38:09,506 Mixing 0.89 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,506 Showing output image 
+2021-05-05 14:38:09,506 Where to show the output
+2021-05-05 14:38:09,507 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,508 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,511 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,553 Slider 1, Value 92
+2021-05-05 14:38:09,553 Mixing 0.92 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,553 Showing output image 
+2021-05-05 14:38:09,553 Where to show the output
+2021-05-05 14:38:09,553 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,554 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,559 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,600 Slider 1, Value 94
+2021-05-05 14:38:09,600 Mixing 0.94 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,600 Showing output image 
+2021-05-05 14:38:09,600 Where to show the output
+2021-05-05 14:38:09,600 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,600 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,604 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,657 Slider 1, Value 95
+2021-05-05 14:38:09,657 Mixing 0.95 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,657 Showing output image 
+2021-05-05 14:38:09,658 Where to show the output
+2021-05-05 14:38:09,658 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,659 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,661 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,704 Slider 1, Value 96
+2021-05-05 14:38:09,704 Mixing 0.96 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,704 Showing output image 
+2021-05-05 14:38:09,704 Where to show the output
+2021-05-05 14:38:09,705 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,706 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,710 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,750 Slider 1, Value 99
+2021-05-05 14:38:09,751 Mixing 0.99 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,751 Showing output image 
+2021-05-05 14:38:09,751 Where to show the output
+2021-05-05 14:38:09,751 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,752 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,756 combine the two mixers depending on the mixType
+2021-05-05 14:38:09,799 Slider 1, Value 100
+2021-05-05 14:38:09,799 Mixing 1.0 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:09,799 Showing output image 
+2021-05-05 14:38:09,799 Where to show the output
+2021-05-05 14:38:09,799 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,800 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:09,804 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,222 Slider 1, Value 99
+2021-05-05 14:38:10,223 Mixing 0.99 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,223 Showing output image 
+2021-05-05 14:38:10,224 Where to show the output
+2021-05-05 14:38:10,225 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,227 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,232 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,272 Slider 1, Value 63
+2021-05-05 14:38:10,272 Mixing 0.63 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,273 Showing output image 
+2021-05-05 14:38:10,273 Where to show the output
+2021-05-05 14:38:10,273 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,274 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,277 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,317 Slider 1, Value 29
+2021-05-05 14:38:10,317 Mixing 0.29 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,317 Showing output image 
+2021-05-05 14:38:10,317 Where to show the output
+2021-05-05 14:38:10,319 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,319 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,324 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,364 Slider 1, Value 13
+2021-05-05 14:38:10,364 Mixing 0.13 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,364 Showing output image 
+2021-05-05 14:38:10,364 Where to show the output
+2021-05-05 14:38:10,364 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,365 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,368 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,408 Slider 1, Value 1
+2021-05-05 14:38:10,408 Mixing 0.01 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,408 Showing output image 
+2021-05-05 14:38:10,408 Where to show the output
+2021-05-05 14:38:10,409 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,409 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,413 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,452 Slider 1, Value 0
+2021-05-05 14:38:10,452 Mixing 0.0 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,452 Showing output image 
+2021-05-05 14:38:10,452 Where to show the output
+2021-05-05 14:38:10,453 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,455 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,459 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,817 Slider 1, Value 3
+2021-05-05 14:38:10,818 Mixing 0.03 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,818 Showing output image 
+2021-05-05 14:38:10,818 Where to show the output
+2021-05-05 14:38:10,819 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,821 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,829 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,881 Slider 1, Value 41
+2021-05-05 14:38:10,881 Mixing 0.41 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,881 Showing output image 
+2021-05-05 14:38:10,881 Where to show the output
+2021-05-05 14:38:10,882 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,882 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,885 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,926 Slider 1, Value 60
+2021-05-05 14:38:10,927 Mixing 0.6 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,927 Showing output image 
+2021-05-05 14:38:10,927 Where to show the output
+2021-05-05 14:38:10,927 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,928 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,931 combine the two mixers depending on the mixType
+2021-05-05 14:38:10,972 Slider 1, Value 72
+2021-05-05 14:38:10,973 Mixing 0.72 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:10,973 Showing output image 
+2021-05-05 14:38:10,973 Where to show the output
+2021-05-05 14:38:10,973 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,974 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:10,977 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,017 Slider 1, Value 82
+2021-05-05 14:38:11,017 Mixing 0.82 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,017 Showing output image 
+2021-05-05 14:38:11,018 Where to show the output
+2021-05-05 14:38:11,018 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,019 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,023 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,065 Slider 1, Value 89
+2021-05-05 14:38:11,065 Mixing 0.89 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,065 Showing output image 
+2021-05-05 14:38:11,065 Where to show the output
+2021-05-05 14:38:11,066 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,066 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,069 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,111 Slider 1, Value 94
+2021-05-05 14:38:11,111 Mixing 0.94 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,111 Showing output image 
+2021-05-05 14:38:11,111 Where to show the output
+2021-05-05 14:38:11,111 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,112 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,115 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,155 Slider 1, Value 96
+2021-05-05 14:38:11,155 Mixing 0.96 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,155 Showing output image 
+2021-05-05 14:38:11,156 Where to show the output
+2021-05-05 14:38:11,156 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,156 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,160 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,200 Slider 1, Value 99
+2021-05-05 14:38:11,201 Mixing 0.99 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,201 Showing output image 
+2021-05-05 14:38:11,201 Where to show the output
+2021-05-05 14:38:11,201 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,202 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,207 combine the two mixers depending on the mixType
+2021-05-05 14:38:11,250 Slider 1, Value 100
+2021-05-05 14:38:11,250 Mixing 1.0 of Uni Phase of Image 2 with 0.5 of Magnitude of Image 1
+2021-05-05 14:38:11,250 Showing output image 
+2021-05-05 14:38:11,250 Where to show the output
+2021-05-05 14:38:11,250 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,251 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:11,255 combine the two mixers depending on the mixType
+2021-05-05 14:38:12,898 Slider 2, Value 51
+2021-05-05 14:38:12,899 Mixing 1.0 of Uni Phase of Image 2 with 0.51 of Magnitude of Image 1
+2021-05-05 14:38:12,899 Showing output image 
+2021-05-05 14:38:12,899 Where to show the output
+2021-05-05 14:38:12,901 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,903 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,909 combine the two mixers depending on the mixType
+2021-05-05 14:38:12,947 Slider 2, Value 62
+2021-05-05 14:38:12,947 Mixing 1.0 of Uni Phase of Image 2 with 0.62 of Magnitude of Image 1
+2021-05-05 14:38:12,947 Showing output image 
+2021-05-05 14:38:12,947 Where to show the output
+2021-05-05 14:38:12,948 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,948 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,951 combine the two mixers depending on the mixType
+2021-05-05 14:38:12,989 Slider 2, Value 72
+2021-05-05 14:38:12,989 Mixing 1.0 of Uni Phase of Image 2 with 0.72 of Magnitude of Image 1
+2021-05-05 14:38:12,989 Showing output image 
+2021-05-05 14:38:12,990 Where to show the output
+2021-05-05 14:38:12,990 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,991 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:12,994 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,034 Slider 2, Value 78
+2021-05-05 14:38:13,035 Mixing 1.0 of Uni Phase of Image 2 with 0.78 of Magnitude of Image 1
+2021-05-05 14:38:13,035 Showing output image 
+2021-05-05 14:38:13,035 Where to show the output
+2021-05-05 14:38:13,035 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,036 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,041 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,082 Slider 2, Value 85
+2021-05-05 14:38:13,082 Mixing 1.0 of Uni Phase of Image 2 with 0.85 of Magnitude of Image 1
+2021-05-05 14:38:13,082 Showing output image 
+2021-05-05 14:38:13,082 Where to show the output
+2021-05-05 14:38:13,083 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,083 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,086 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,125 Slider 2, Value 91
+2021-05-05 14:38:13,125 Mixing 1.0 of Uni Phase of Image 2 with 0.91 of Magnitude of Image 1
+2021-05-05 14:38:13,125 Showing output image 
+2021-05-05 14:38:13,125 Where to show the output
+2021-05-05 14:38:13,126 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,127 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,130 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,168 Slider 2, Value 96
+2021-05-05 14:38:13,168 Mixing 1.0 of Uni Phase of Image 2 with 0.96 of Magnitude of Image 1
+2021-05-05 14:38:13,168 Showing output image 
+2021-05-05 14:38:13,168 Where to show the output
+2021-05-05 14:38:13,168 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,169 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,173 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,213 Slider 2, Value 100
+2021-05-05 14:38:13,213 Mixing 1.0 of Uni Phase of Image 2 with 1.0 of Magnitude of Image 1
+2021-05-05 14:38:13,213 Showing output image 
+2021-05-05 14:38:13,213 Where to show the output
+2021-05-05 14:38:13,214 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,214 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,217 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,620 Slider 2, Value 94
+2021-05-05 14:38:13,620 Mixing 1.0 of Uni Phase of Image 2 with 0.94 of Magnitude of Image 1
+2021-05-05 14:38:13,621 Showing output image 
+2021-05-05 14:38:13,621 Where to show the output
+2021-05-05 14:38:13,622 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,624 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,631 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,682 Slider 2, Value 56
+2021-05-05 14:38:13,682 Mixing 1.0 of Uni Phase of Image 2 with 0.56 of Magnitude of Image 1
+2021-05-05 14:38:13,682 Showing output image 
+2021-05-05 14:38:13,682 Where to show the output
+2021-05-05 14:38:13,683 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,683 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,686 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,729 Slider 2, Value 41
+2021-05-05 14:38:13,729 Mixing 1.0 of Uni Phase of Image 2 with 0.41 of Magnitude of Image 1
+2021-05-05 14:38:13,729 Showing output image 
+2021-05-05 14:38:13,730 Where to show the output
+2021-05-05 14:38:13,730 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,730 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,734 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,775 Slider 2, Value 29
+2021-05-05 14:38:13,775 Mixing 1.0 of Uni Phase of Image 2 with 0.29 of Magnitude of Image 1
+2021-05-05 14:38:13,775 Showing output image 
+2021-05-05 14:38:13,775 Where to show the output
+2021-05-05 14:38:13,775 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,776 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,779 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,820 Slider 2, Value 19
+2021-05-05 14:38:13,820 Mixing 1.0 of Uni Phase of Image 2 with 0.19 of Magnitude of Image 1
+2021-05-05 14:38:13,820 Showing output image 
+2021-05-05 14:38:13,820 Where to show the output
+2021-05-05 14:38:13,821 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,822 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,827 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,867 Slider 2, Value 12
+2021-05-05 14:38:13,867 Mixing 1.0 of Uni Phase of Image 2 with 0.12 of Magnitude of Image 1
+2021-05-05 14:38:13,867 Showing output image 
+2021-05-05 14:38:13,867 Where to show the output
+2021-05-05 14:38:13,867 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,867 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,873 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,915 Slider 2, Value 6
+2021-05-05 14:38:13,915 Mixing 1.0 of Uni Phase of Image 2 with 0.06 of Magnitude of Image 1
+2021-05-05 14:38:13,915 Showing output image 
+2021-05-05 14:38:13,915 Where to show the output
+2021-05-05 14:38:13,916 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,916 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,920 combine the two mixers depending on the mixType
+2021-05-05 14:38:13,962 Slider 2, Value 3
+2021-05-05 14:38:13,963 Mixing 1.0 of Uni Phase of Image 2 with 0.03 of Magnitude of Image 1
+2021-05-05 14:38:13,963 Showing output image 
+2021-05-05 14:38:13,963 Where to show the output
+2021-05-05 14:38:13,963 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,964 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:13,967 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,021 Slider 2, Value 0
+2021-05-05 14:38:14,022 Mixing 1.0 of Uni Phase of Image 2 with 0.0 of Magnitude of Image 1
+2021-05-05 14:38:14,022 Showing output image 
+2021-05-05 14:38:14,022 Where to show the output
+2021-05-05 14:38:14,022 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,023 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,026 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,472 Slider 2, Value 1
+2021-05-05 14:38:14,473 Mixing 1.0 of Uni Phase of Image 2 with 0.01 of Magnitude of Image 1
+2021-05-05 14:38:14,473 Showing output image 
+2021-05-05 14:38:14,473 Where to show the output
+2021-05-05 14:38:14,473 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,474 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,477 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,515 Slider 2, Value 11
+2021-05-05 14:38:14,515 Mixing 1.0 of Uni Phase of Image 2 with 0.11 of Magnitude of Image 1
+2021-05-05 14:38:14,515 Showing output image 
+2021-05-05 14:38:14,515 Where to show the output
+2021-05-05 14:38:14,515 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,516 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,519 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,560 Slider 2, Value 32
+2021-05-05 14:38:14,560 Mixing 1.0 of Uni Phase of Image 2 with 0.32 of Magnitude of Image 1
+2021-05-05 14:38:14,560 Showing output image 
+2021-05-05 14:38:14,560 Where to show the output
+2021-05-05 14:38:14,561 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,561 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,564 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,601 Slider 2, Value 47
+2021-05-05 14:38:14,601 Mixing 1.0 of Uni Phase of Image 2 with 0.47 of Magnitude of Image 1
+2021-05-05 14:38:14,601 Showing output image 
+2021-05-05 14:38:14,602 Where to show the output
+2021-05-05 14:38:14,602 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,603 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,606 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,646 Slider 2, Value 57
+2021-05-05 14:38:14,647 Mixing 1.0 of Uni Phase of Image 2 with 0.57 of Magnitude of Image 1
+2021-05-05 14:38:14,647 Showing output image 
+2021-05-05 14:38:14,647 Where to show the output
+2021-05-05 14:38:14,648 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,648 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,651 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,691 Slider 2, Value 58
+2021-05-05 14:38:14,691 Mixing 1.0 of Uni Phase of Image 2 with 0.58 of Magnitude of Image 1
+2021-05-05 14:38:14,691 Showing output image 
+2021-05-05 14:38:14,692 Where to show the output
+2021-05-05 14:38:14,692 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,693 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,696 combine the two mixers depending on the mixType
+2021-05-05 14:38:14,735 Slider 2, Value 57
+2021-05-05 14:38:14,735 Mixing 1.0 of Uni Phase of Image 2 with 0.57 of Magnitude of Image 1
+2021-05-05 14:38:14,735 Showing output image 
+2021-05-05 14:38:14,735 Where to show the output
+2021-05-05 14:38:14,736 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,736 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:14,740 combine the two mixers depending on the mixType
+2021-05-05 14:38:17,027 Changing items of combobox 2 according to component chosen from combobox 1
+2021-05-05 14:38:17,027 clears the items of the combobox
+2021-05-05 14:38:18,895 Slider 1, Value 99
+2021-05-05 14:38:18,895 Mixing 0.99 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:18,895 Showing output image 
+2021-05-05 14:38:18,896 Where to show the output
+2021-05-05 14:38:18,897 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,901 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,904 combine the two mixers depending on the mixType
+2021-05-05 14:38:18,945 Slider 1, Value 85
+2021-05-05 14:38:18,945 Mixing 0.85 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:18,945 Showing output image 
+2021-05-05 14:38:18,945 Where to show the output
+2021-05-05 14:38:18,945 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,946 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,949 combine the two mixers depending on the mixType
+2021-05-05 14:38:18,991 Slider 1, Value 75
+2021-05-05 14:38:18,991 Mixing 0.75 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:18,991 Showing output image 
+2021-05-05 14:38:18,991 Where to show the output
+2021-05-05 14:38:18,991 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,992 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:18,996 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,041 Slider 1, Value 68
+2021-05-05 14:38:19,042 Mixing 0.68 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,042 Showing output image 
+2021-05-05 14:38:19,042 Where to show the output
+2021-05-05 14:38:19,042 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,043 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,047 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,093 Slider 1, Value 60
+2021-05-05 14:38:19,093 Mixing 0.6 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,093 Showing output image 
+2021-05-05 14:38:19,093 Where to show the output
+2021-05-05 14:38:19,094 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,095 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,099 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,144 Slider 1, Value 51
+2021-05-05 14:38:19,145 Mixing 0.51 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,145 Showing output image 
+2021-05-05 14:38:19,145 Where to show the output
+2021-05-05 14:38:19,145 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,146 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,150 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,196 Slider 1, Value 39
+2021-05-05 14:38:19,197 Mixing 0.39 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,197 Showing output image 
+2021-05-05 14:38:19,197 Where to show the output
+2021-05-05 14:38:19,198 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,199 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,202 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,245 Slider 1, Value 34
+2021-05-05 14:38:19,245 Mixing 0.34 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,245 Showing output image 
+2021-05-05 14:38:19,245 Where to show the output
+2021-05-05 14:38:19,246 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,247 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,250 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,291 Slider 1, Value 29
+2021-05-05 14:38:19,291 Mixing 0.29 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,291 Showing output image 
+2021-05-05 14:38:19,291 Where to show the output
+2021-05-05 14:38:19,293 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,294 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,297 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,338 Slider 1, Value 21
+2021-05-05 14:38:19,338 Mixing 0.21 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,338 Showing output image 
+2021-05-05 14:38:19,338 Where to show the output
+2021-05-05 14:38:19,339 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,341 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,344 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,385 Slider 1, Value 13
+2021-05-05 14:38:19,385 Mixing 0.13 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,385 Showing output image 
+2021-05-05 14:38:19,385 Where to show the output
+2021-05-05 14:38:19,385 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,386 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,391 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,432 Slider 1, Value 9
+2021-05-05 14:38:19,432 Mixing 0.09 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,432 Showing output image 
+2021-05-05 14:38:19,432 Where to show the output
+2021-05-05 14:38:19,433 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,434 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,438 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,480 Slider 1, Value 5
+2021-05-05 14:38:19,480 Mixing 0.05 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,480 Showing output image 
+2021-05-05 14:38:19,480 Where to show the output
+2021-05-05 14:38:19,481 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,482 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,485 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,529 Slider 1, Value 3
+2021-05-05 14:38:19,529 Mixing 0.03 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,529 Showing output image 
+2021-05-05 14:38:19,529 Where to show the output
+2021-05-05 14:38:19,529 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,530 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,533 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,575 Slider 1, Value 2
+2021-05-05 14:38:19,575 Mixing 0.02 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,575 Showing output image 
+2021-05-05 14:38:19,575 Where to show the output
+2021-05-05 14:38:19,576 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,577 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,580 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,622 Slider 1, Value 1
+2021-05-05 14:38:19,622 Mixing 0.01 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,622 Showing output image 
+2021-05-05 14:38:19,622 Where to show the output
+2021-05-05 14:38:19,622 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,625 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,627 combine the two mixers depending on the mixType
+2021-05-05 14:38:19,675 Slider 1, Value 0
+2021-05-05 14:38:19,675 Mixing 0.0 of Uni Mag of Image 2 with 0.57 of Phase of Image 1
+2021-05-05 14:38:19,675 Showing output image 
+2021-05-05 14:38:19,675 Where to show the output
+2021-05-05 14:38:19,676 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,678 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:19,681 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,278 Slider 2, Value 55
+2021-05-05 14:38:24,278 Mixing 0.0 of Uni Mag of Image 2 with 0.55 of Phase of Image 1
+2021-05-05 14:38:24,279 Showing output image 
+2021-05-05 14:38:24,279 Where to show the output
+2021-05-05 14:38:24,280 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,284 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,288 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,330 Slider 2, Value 35
+2021-05-05 14:38:24,330 Mixing 0.0 of Uni Mag of Image 2 with 0.35 of Phase of Image 1
+2021-05-05 14:38:24,330 Showing output image 
+2021-05-05 14:38:24,330 Where to show the output
+2021-05-05 14:38:24,331 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,332 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,335 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,376 Slider 2, Value 19
+2021-05-05 14:38:24,376 Mixing 0.0 of Uni Mag of Image 2 with 0.19 of Phase of Image 1
+2021-05-05 14:38:24,376 Showing output image 
+2021-05-05 14:38:24,377 Where to show the output
+2021-05-05 14:38:24,377 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,378 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,381 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,423 Slider 2, Value 13
+2021-05-05 14:38:24,423 Mixing 0.0 of Uni Mag of Image 2 with 0.13 of Phase of Image 1
+2021-05-05 14:38:24,423 Showing output image 
+2021-05-05 14:38:24,423 Where to show the output
+2021-05-05 14:38:24,424 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,425 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,428 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,469 Slider 2, Value 3
+2021-05-05 14:38:24,470 Mixing 0.0 of Uni Mag of Image 2 with 0.03 of Phase of Image 1
+2021-05-05 14:38:24,470 Showing output image 
+2021-05-05 14:38:24,470 Where to show the output
+2021-05-05 14:38:24,470 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,471 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,476 combine the two mixers depending on the mixType
+2021-05-05 14:38:24,516 Slider 2, Value 0
+2021-05-05 14:38:24,516 Mixing 0.0 of Uni Mag of Image 2 with 0.0 of Phase of Image 1
+2021-05-05 14:38:24,516 Showing output image 
+2021-05-05 14:38:24,516 Where to show the output
+2021-05-05 14:38:24,517 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,518 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:24,523 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,190 Slider 2, Value 2
+2021-05-05 14:38:28,190 Mixing 0.0 of Uni Mag of Image 2 with 0.02 of Phase of Image 1
+2021-05-05 14:38:28,190 Showing output image 
+2021-05-05 14:38:28,191 Where to show the output
+2021-05-05 14:38:28,192 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,194 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,198 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,240 Slider 2, Value 18
+2021-05-05 14:38:28,240 Mixing 0.0 of Uni Mag of Image 2 with 0.18 of Phase of Image 1
+2021-05-05 14:38:28,240 Showing output image 
+2021-05-05 14:38:28,240 Where to show the output
+2021-05-05 14:38:28,240 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,241 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,244 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,286 Slider 2, Value 37
+2021-05-05 14:38:28,287 Mixing 0.0 of Uni Mag of Image 2 with 0.37 of Phase of Image 1
+2021-05-05 14:38:28,287 Showing output image 
+2021-05-05 14:38:28,287 Where to show the output
+2021-05-05 14:38:28,288 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,289 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,292 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,332 Slider 2, Value 55
+2021-05-05 14:38:28,332 Mixing 0.0 of Uni Mag of Image 2 with 0.55 of Phase of Image 1
+2021-05-05 14:38:28,332 Showing output image 
+2021-05-05 14:38:28,332 Where to show the output
+2021-05-05 14:38:28,333 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,335 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,339 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,381 Slider 2, Value 73
+2021-05-05 14:38:28,381 Mixing 0.0 of Uni Mag of Image 2 with 0.73 of Phase of Image 1
+2021-05-05 14:38:28,381 Showing output image 
+2021-05-05 14:38:28,381 Where to show the output
+2021-05-05 14:38:28,381 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,382 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,388 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,430 Slider 2, Value 84
+2021-05-05 14:38:28,430 Mixing 0.0 of Uni Mag of Image 2 with 0.84 of Phase of Image 1
+2021-05-05 14:38:28,430 Showing output image 
+2021-05-05 14:38:28,430 Where to show the output
+2021-05-05 14:38:28,430 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,431 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,436 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,478 Slider 2, Value 92
+2021-05-05 14:38:28,478 Mixing 0.0 of Uni Mag of Image 2 with 0.92 of Phase of Image 1
+2021-05-05 14:38:28,478 Showing output image 
+2021-05-05 14:38:28,478 Where to show the output
+2021-05-05 14:38:28,479 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,480 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,484 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,528 Slider 2, Value 98
+2021-05-05 14:38:28,528 Mixing 0.0 of Uni Mag of Image 2 with 0.98 of Phase of Image 1
+2021-05-05 14:38:28,528 Showing output image 
+2021-05-05 14:38:28,528 Where to show the output
+2021-05-05 14:38:28,528 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,530 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,533 combine the two mixers depending on the mixType
+2021-05-05 14:38:28,578 Slider 2, Value 100
+2021-05-05 14:38:28,578 Mixing 0.0 of Uni Mag of Image 2 with 1.0 of Phase of Image 1
+2021-05-05 14:38:28,578 Showing output image 
+2021-05-05 14:38:28,578 Where to show the output
+2021-05-05 14:38:28,578 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,579 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:28,582 combine the two mixers depending on the mixType
+2021-05-05 14:38:35,281 Slider 2, Value 99
+2021-05-05 14:38:35,281 Mixing 0.0 of Uni Mag of Image 2 with 0.99 of Phase of Image 1
+2021-05-05 14:38:35,282 Showing output image 
+2021-05-05 14:38:35,282 Where to show the output
+2021-05-05 14:38:35,283 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,287 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,294 combine the two mixers depending on the mixType
+2021-05-05 14:38:35,344 Slider 2, Value 52
+2021-05-05 14:38:35,344 Mixing 0.0 of Uni Mag of Image 2 with 0.52 of Phase of Image 1
+2021-05-05 14:38:35,344 Showing output image 
+2021-05-05 14:38:35,344 Where to show the output
+2021-05-05 14:38:35,345 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,346 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,350 combine the two mixers depending on the mixType
+2021-05-05 14:38:35,392 Slider 2, Value 25
+2021-05-05 14:38:35,392 Mixing 0.0 of Uni Mag of Image 2 with 0.25 of Phase of Image 1
+2021-05-05 14:38:35,392 Showing output image 
+2021-05-05 14:38:35,392 Where to show the output
+2021-05-05 14:38:35,393 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,394 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,396 combine the two mixers depending on the mixType
+2021-05-05 14:38:35,440 Slider 2, Value 0
+2021-05-05 14:38:35,440 Mixing 0.0 of Uni Mag of Image 2 with 0.0 of Phase of Image 1
+2021-05-05 14:38:35,440 Showing output image 
+2021-05-05 14:38:35,440 Where to show the output
+2021-05-05 14:38:35,440 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,442 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:35,444 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,717 Slider 2, Value 1
+2021-05-05 14:38:39,718 Mixing 0.0 of Uni Mag of Image 2 with 0.01 of Phase of Image 1
+2021-05-05 14:38:39,718 Showing output image 
+2021-05-05 14:38:39,718 Where to show the output
+2021-05-05 14:38:39,719 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,722 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,731 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,785 Slider 2, Value 25
+2021-05-05 14:38:39,785 Mixing 0.0 of Uni Mag of Image 2 with 0.25 of Phase of Image 1
+2021-05-05 14:38:39,785 Showing output image 
+2021-05-05 14:38:39,785 Where to show the output
+2021-05-05 14:38:39,786 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,786 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,789 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,830 Slider 2, Value 52
+2021-05-05 14:38:39,831 Mixing 0.0 of Uni Mag of Image 2 with 0.52 of Phase of Image 1
+2021-05-05 14:38:39,831 Showing output image 
+2021-05-05 14:38:39,831 Where to show the output
+2021-05-05 14:38:39,831 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,832 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,836 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,878 Slider 2, Value 72
+2021-05-05 14:38:39,878 Mixing 0.0 of Uni Mag of Image 2 with 0.72 of Phase of Image 1
+2021-05-05 14:38:39,878 Showing output image 
+2021-05-05 14:38:39,879 Where to show the output
+2021-05-05 14:38:39,879 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,880 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,886 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,927 Slider 2, Value 85
+2021-05-05 14:38:39,927 Mixing 0.0 of Uni Mag of Image 2 with 0.85 of Phase of Image 1
+2021-05-05 14:38:39,927 Showing output image 
+2021-05-05 14:38:39,927 Where to show the output
+2021-05-05 14:38:39,927 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,928 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,933 combine the two mixers depending on the mixType
+2021-05-05 14:38:39,976 Slider 2, Value 90
+2021-05-05 14:38:39,976 Mixing 0.0 of Uni Mag of Image 2 with 0.9 of Phase of Image 1
+2021-05-05 14:38:39,976 Showing output image 
+2021-05-05 14:38:39,976 Where to show the output
+2021-05-05 14:38:39,977 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,978 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:39,982 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,025 Slider 2, Value 92
+2021-05-05 14:38:40,025 Mixing 0.0 of Uni Mag of Image 2 with 0.92 of Phase of Image 1
+2021-05-05 14:38:40,025 Showing output image 
+2021-05-05 14:38:40,025 Where to show the output
+2021-05-05 14:38:40,025 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,026 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,030 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,220 Slider 2, Value 91
+2021-05-05 14:38:40,220 Mixing 0.0 of Uni Mag of Image 2 with 0.91 of Phase of Image 1
+2021-05-05 14:38:40,220 Showing output image 
+2021-05-05 14:38:40,220 Where to show the output
+2021-05-05 14:38:40,220 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,221 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,224 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,266 Slider 2, Value 85
+2021-05-05 14:38:40,266 Mixing 0.0 of Uni Mag of Image 2 with 0.85 of Phase of Image 1
+2021-05-05 14:38:40,267 Showing output image 
+2021-05-05 14:38:40,267 Where to show the output
+2021-05-05 14:38:40,267 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,268 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,271 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,310 Slider 2, Value 39
+2021-05-05 14:38:40,310 Mixing 0.0 of Uni Mag of Image 2 with 0.39 of Phase of Image 1
+2021-05-05 14:38:40,310 Showing output image 
+2021-05-05 14:38:40,310 Where to show the output
+2021-05-05 14:38:40,310 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,312 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,316 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,357 Slider 2, Value 8
+2021-05-05 14:38:40,357 Mixing 0.0 of Uni Mag of Image 2 with 0.08 of Phase of Image 1
+2021-05-05 14:38:40,357 Showing output image 
+2021-05-05 14:38:40,357 Where to show the output
+2021-05-05 14:38:40,358 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,359 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,362 combine the two mixers depending on the mixType
+2021-05-05 14:38:40,407 Slider 2, Value 0
+2021-05-05 14:38:40,407 Mixing 0.0 of Uni Mag of Image 2 with 0.0 of Phase of Image 1
+2021-05-05 14:38:40,407 Showing output image 
+2021-05-05 14:38:40,407 Where to show the output
+2021-05-05 14:38:40,408 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,409 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:40,412 combine the two mixers depending on the mixType
+2021-05-05 14:38:47,957 selecting image from which we choose the component
+2021-05-05 14:38:47,957 Image Combobox 1 has changed to 1
+2021-05-05 14:38:47,957 Showing output image 
+2021-05-05 14:38:47,957 Where to show the output
+2021-05-05 14:38:47,959 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:47,962 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:47,967 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,653 Slider 1, Value 4
+2021-05-05 14:38:51,654 Mixing 0.04 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,654 Showing output image 
+2021-05-05 14:38:51,654 Where to show the output
+2021-05-05 14:38:51,655 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,659 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,665 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,706 Slider 1, Value 24
+2021-05-05 14:38:51,706 Mixing 0.24 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,706 Showing output image 
+2021-05-05 14:38:51,706 Where to show the output
+2021-05-05 14:38:51,707 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,708 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,710 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,755 Slider 1, Value 44
+2021-05-05 14:38:51,755 Mixing 0.44 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,755 Showing output image 
+2021-05-05 14:38:51,755 Where to show the output
+2021-05-05 14:38:51,756 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,756 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,759 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,805 Slider 1, Value 54
+2021-05-05 14:38:51,806 Mixing 0.54 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,806 Showing output image 
+2021-05-05 14:38:51,806 Where to show the output
+2021-05-05 14:38:51,806 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,807 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,810 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,855 Slider 1, Value 61
+2021-05-05 14:38:51,856 Mixing 0.61 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,856 Showing output image 
+2021-05-05 14:38:51,856 Where to show the output
+2021-05-05 14:38:51,856 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,857 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,860 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,908 Slider 1, Value 70
+2021-05-05 14:38:51,908 Mixing 0.7 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,908 Showing output image 
+2021-05-05 14:38:51,908 Where to show the output
+2021-05-05 14:38:51,908 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,909 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,916 combine the two mixers depending on the mixType
+2021-05-05 14:38:51,959 Slider 1, Value 79
+2021-05-05 14:38:51,959 Mixing 0.79 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:51,959 Showing output image 
+2021-05-05 14:38:51,959 Where to show the output
+2021-05-05 14:38:51,959 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,961 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:51,967 combine the two mixers depending on the mixType
+2021-05-05 14:38:52,007 Slider 1, Value 86
+2021-05-05 14:38:52,007 Mixing 0.86 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:52,007 Showing output image 
+2021-05-05 14:38:52,007 Where to show the output
+2021-05-05 14:38:52,007 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,008 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,013 combine the two mixers depending on the mixType
+2021-05-05 14:38:52,056 Slider 1, Value 94
+2021-05-05 14:38:52,056 Mixing 0.94 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:52,056 Showing output image 
+2021-05-05 14:38:52,056 Where to show the output
+2021-05-05 14:38:52,056 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,057 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,060 combine the two mixers depending on the mixType
+2021-05-05 14:38:52,105 Slider 1, Value 100
+2021-05-05 14:38:52,105 Mixing 1.0 of Uni Mag of Image 1 with 0.0 of Phase of Image 1
+2021-05-05 14:38:52,105 Showing output image 
+2021-05-05 14:38:52,105 Where to show the output
+2021-05-05 14:38:52,106 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,107 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:52,110 combine the two mixers depending on the mixType
+2021-05-05 14:38:54,915 Slider 2, Value 2
+2021-05-05 14:38:54,915 Mixing 1.0 of Uni Mag of Image 1 with 0.02 of Phase of Image 1
+2021-05-05 14:38:54,915 Showing output image 
+2021-05-05 14:38:54,916 Where to show the output
+2021-05-05 14:38:54,916 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:54,919 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:54,929 combine the two mixers depending on the mixType
+2021-05-05 14:38:54,983 Slider 2, Value 28
+2021-05-05 14:38:54,984 Mixing 1.0 of Uni Mag of Image 1 with 0.28 of Phase of Image 1
+2021-05-05 14:38:54,984 Showing output image 
+2021-05-05 14:38:54,984 Where to show the output
+2021-05-05 14:38:54,984 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:54,985 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:54,988 combine the two mixers depending on the mixType
+2021-05-05 14:38:55,030 Slider 2, Value 50
+2021-05-05 14:38:55,030 Mixing 1.0 of Uni Mag of Image 1 with 0.5 of Phase of Image 1
+2021-05-05 14:38:55,030 Showing output image 
+2021-05-05 14:38:55,030 Where to show the output
+2021-05-05 14:38:55,031 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:55,032 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:55,034 combine the two mixers depending on the mixType
+2021-05-05 14:38:55,076 Slider 2, Value 69
+2021-05-05 14:38:55,076 Mixing 1.0 of Uni Mag of Image 1 with 0.69 of Phase of Image 1
+2021-05-05 14:38:55,076 Showing output image 
+2021-05-05 14:38:55,076 Where to show the output
+2021-05-05 14:38:55,077 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:55,079 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:55,083 combine the two mixers depending on the mixType
+2021-05-05 14:38:55,126 Slider 2, Value 82
+2021-05-05 14:38:56,279 Mixing 1.0 of Uni Mag of Image 1 with 0.82 of Phase of Image 1
+2021-05-05 14:38:56,279 Showing output image 
+2021-05-05 14:38:56,279 Where to show the output
+2021-05-05 14:38:56,281 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:56,285 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:56,292 combine the two mixers depending on the mixType
+2021-05-05 14:38:56,343 Slider 2, Value 100
+2021-05-05 14:38:56,343 Mixing 1.0 of Uni Mag of Image 1 with 1.0 of Phase of Image 1
+2021-05-05 14:38:56,343 Showing output image 
+2021-05-05 14:38:56,343 Where to show the output
+2021-05-05 14:38:56,344 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:56,345 checking the mixtype and scaling the component chosen
+2021-05-05 14:38:56,349 combine the two mixers depending on the mixType
+2021-05-05 14:39:11,481 Slider 2, Value 90
+2021-05-05 14:39:11,481 Mixing 1.0 of Uni Mag of Image 1 with 0.9 of Uni Phase of Image 1
+2021-05-05 14:39:11,481 Showing output image 
+2021-05-05 14:39:11,482 Where to show the output
+2021-05-05 14:39:11,483 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:11,486 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:11,486 combine the two mixers depending on the mixType
+2021-05-05 14:39:12,010 Slider 2, Value 98
+2021-05-05 14:39:12,011 Mixing 1.0 of Uni Mag of Image 1 with 0.98 of Uni Phase of Image 1
+2021-05-05 14:39:12,011 Showing output image 
+2021-05-05 14:39:12,012 Where to show the output
+2021-05-05 14:39:12,013 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:12,016 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:12,016 combine the two mixers depending on the mixType
+2021-05-05 14:39:13,458 Slider 2, Value 100
+2021-05-05 14:39:13,458 Mixing 1.0 of Uni Mag of Image 1 with 1.0 of Uni Phase of Image 1
+2021-05-05 14:39:13,458 Showing output image 
+2021-05-05 14:39:13,458 Where to show the output
+2021-05-05 14:39:13,458 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:13,459 checking the mixtype and scaling the component chosen
+2021-05-05 14:39:13,460 combine the two mixers depending on the mixType

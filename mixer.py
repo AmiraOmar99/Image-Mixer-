@@ -71,7 +71,7 @@ class Mixer():
             self.set_second_compo(self.mix_types[0])
             self.selected_components[1] = self.win.ui_elements.img_mixer_combos[1].currentText()
             self.win.ui_elements.sliders[1].setEnabled(True)
-        if selected_component == "Uni Mag" or selected_component == "Uni Phase":
+        if self.selected_component == "Uni Mag" or self.selected_component == "Uni Phase":
             self.win.ui_elements.sliders[index].setEnabled(False)
         else:
             self.win.ui_elements.sliders[index].setEnabled(True)
