@@ -1,0 +1,28 @@
+2021-05-05 02:56:12,413 Program Execution
+2021-05-05 02:56:12,413 UI_MainWindow
+2021-05-05 02:56:18,020 open image 1
+2021-05-05 02:56:25,607 Opening image : D:/Biomedical/3rd year/2nd semester/DSP/tasks/github/Image-Mixer-/images/flower1.jpg
+2021-05-05 02:56:26,342 image shape is(400, 400)
+2021-05-05 02:56:26,621 check image 1 size 
+2021-05-05 02:56:26,621 image size is(400, 400)
+2021-05-05 02:56:26,621 opened
+2021-05-05 02:56:26,895 plotting Magnitude of image 1
+2021-05-05 02:56:26,900 Checking if the user opens the 2 images
+2021-05-05 02:56:26,901 Where to show the output
+2021-05-05 02:56:26,901 Showing output image 
+2021-05-05 02:56:30,802 open image 2
+2021-05-05 02:56:35,169 Opening image : D:/Biomedical/3rd year/2nd semester/DSP/tasks/github/Image-Mixer-/images/perfect.jpg
+2021-05-05 02:56:35,306 image shape is(400, 400)
+2021-05-05 02:56:35,380 check image 2 size 
+2021-05-05 02:56:35,380 there is another image obened
+2021-05-05 02:56:35,380 same size
+2021-05-05 02:56:35,380 opened
+2021-05-05 02:56:35,384 plotting Magnitude of image 2
+2021-05-05 02:56:35,388 Checking if the user opens the 2 images
+2021-05-05 02:56:35,388 Where to show the output
+2021-05-05 02:56:35,389 Showing output image 
+2021-05-05 02:56:35,396 combine the two mixers depending on the mixType
+2021-05-05 02:56:50,606 Component ComboBox 2 of image 1 changed to Image Uni Phase
+2021-05-05 02:56:50,606 Where to show the output
+2021-05-05 02:56:50,606 Showing output image 
+2021-05-05 02:56:50,611 combine the two mixers depending on the mixType

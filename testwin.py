@@ -28,14 +28,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.frame = QtWidgets.QFrame(self.scrollAreaWidgetContents)
+        
         self.frame.setMinimumSize(QtCore.QSize(1700, 900))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
+
+
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
+
+        # 
         self.frame_12 = QtWidgets.QFrame(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
@@ -61,6 +66,7 @@ class Ui_MainWindow(object):
         self.original_2.setMinimumSize(QtCore.QSize(380, 355))
         self.original_2.setObjectName("original_2")
         self.horizontalLayout_4.addWidget(self.original_2)
+
         spacerItem = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem)
         self.components_p2 = PlotWidget(self.horizontalLayoutWidget_4)
@@ -78,6 +84,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+
         self.label_Image2 = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         font = QtGui.QFont()
         font.setFamily("MS UI Gothic")
@@ -122,6 +129,7 @@ class Ui_MainWindow(object):
         spacerItem2 = QtWidgets.QSpacerItem(1, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem2)
         self.gridLayout.addWidget(self.frame_12, 1, 0, 1, 1)
+
         self.frame_11 = QtWidgets.QFrame(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
@@ -147,8 +155,12 @@ class Ui_MainWindow(object):
         self.original_1.setMinimumSize(QtCore.QSize(380, 355))
         self.original_1.setObjectName("original_1")
         self.horizontalLayout_1.addWidget(self.original_1)
+
+
+        #spacer item esmp horizontalSpacer_1 
         spacerItem3 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_1.addItem(spacerItem3)
+
         self.components_p1 = PlotWidget(self.horizontalLayoutWidget_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -158,6 +170,7 @@ class Ui_MainWindow(object):
         self.components_p1.setMinimumSize(QtCore.QSize(380, 355))
         self.components_p1.setObjectName("components_p1")
         self.horizontalLayout_1.addWidget(self.components_p1)
+
         self.horizontalLayoutWidget_6 = QtWidgets.QWidget(self.frame_11)
         self.horizontalLayoutWidget_6.setGeometry(QtCore.QRect(10, 10, 801, 51))
         self.horizontalLayoutWidget_6.setObjectName("horizontalLayoutWidget_6")
@@ -165,6 +178,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_Image2_2 = QtWidgets.QLabel(self.horizontalLayoutWidget_6)
+
         font = QtGui.QFont()
         font.setFamily("MS UI Gothic")
         font.setPointSize(25)
@@ -176,8 +190,11 @@ class Ui_MainWindow(object):
         self.label_Image2_2.setFont(font)
         self.label_Image2_2.setObjectName("label_Image2_2")
         self.horizontalLayout_2.addWidget(self.label_Image2_2)
+
+        # spacer 4 esmo horizontalSpacer_2
         spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem4)
+
         self.btn_open1 = QtWidgets.QPushButton(self.horizontalLayoutWidget_6)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -208,9 +225,13 @@ class Ui_MainWindow(object):
         self.comboBox_components1.addItem("")
         self.comboBox_components1.addItem("")
         self.horizontalLayout_2.addWidget(self.comboBox_components1)
+
+        # horizontalspacer_3
         spacerItem5 = QtWidgets.QSpacerItem(1, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem5)
+
         self.gridLayout.addWidget(self.frame_11, 0, 0, 1, 1)
+
         self.frame_21 = QtWidgets.QFrame(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
@@ -241,6 +262,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.addWidget(self.label_Mixer)
         spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem6)
+
         self.comboBox_outputs = QtWidgets.QComboBox(self.horizontalLayoutWidget_5)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -258,6 +280,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.addWidget(self.comboBox_outputs)
         spacerItem7 = QtWidgets.QSpacerItem(1, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_7.addItem(spacerItem7)
+
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.frame_21)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 130, 801, 41))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
@@ -271,6 +294,7 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.horizontalLayout_5.addWidget(self.label)
+
         spacerItem8 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem8)
         self.Img_compo1 = QtWidgets.QComboBox(self.horizontalLayoutWidget)
@@ -288,8 +312,10 @@ class Ui_MainWindow(object):
         self.Img_compo1.addItem("")
         self.Img_compo1.addItem("")
         self.horizontalLayout_5.addWidget(self.Img_compo1)
+
         spacerItem9 = QtWidgets.QSpacerItem(60, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem9)
+
         self.slider1 = QtWidgets.QSlider(self.horizontalLayoutWidget)
         self.slider1.setOrientation(QtCore.Qt.Horizontal)
         self.slider1.setObjectName("slider1")
@@ -373,6 +399,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         spacerItem13 = QtWidgets.QSpacerItem(190, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem13)
+
         self.Mixer_components2 = QtWidgets.QComboBox(self.horizontalLayoutWidget_10)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -394,7 +421,11 @@ class Ui_MainWindow(object):
         self.Mixer_components2.addItem("")
         self.Mixer_components2.addItem("")
         self.horizontalLayout_6.addWidget(self.Mixer_components2)
+
         self.gridLayout.addWidget(self.frame_21, 0, 1, 1, 1)
+
+
+
         self.frame_22 = QtWidgets.QFrame(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(1)
@@ -405,6 +436,7 @@ class Ui_MainWindow(object):
         self.frame_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_22.setObjectName("frame_22")
+        
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_22)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -423,6 +455,9 @@ class Ui_MainWindow(object):
         self.label_out1.setObjectName("label_out1")
         self.verticalLayout.addWidget(self.label_out1)
         self.horizontalLayout.addLayout(self.verticalLayout)
+
+
+
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label_out2_2 = QtWidgets.QLabel(self.frame_22)
@@ -460,8 +495,10 @@ class Ui_MainWindow(object):
         self.output2.setMinimumSize(QtCore.QSize(380, 355))
         self.output2.setObjectName("output2")
         self.horizontalLayout_10.addWidget(self.output2)
+
         self.verticalLayout_4.addLayout(self.horizontalLayout_10)
         self.gridLayout.addWidget(self.frame_22, 1, 1, 1, 1)
+
         self.verticalLayout_2.addLayout(self.gridLayout)
         self.verticalLayout_5.addWidget(self.frame)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -521,5 +558,6 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     main = Ui_MainWindow()
     main.setupUi(MainWindow)
+    MainWindow.showMaximized()
     MainWindow.show()
     sys.exit(app.exec_())

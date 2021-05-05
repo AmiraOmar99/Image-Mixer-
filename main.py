@@ -20,6 +20,7 @@ class MainWindow(QtWidgets.QMainWindow, mainUI.Ui_MainWindow):
         self.setupUi(self)
         self.mixing=Mixer(self)
         # self.image_test=Image()
+        self.showMaximized()
         self.show()
         # self.images = {0: None, 1:None} #store image path and object
         self.size = None
