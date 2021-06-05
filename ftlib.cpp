@@ -7,7 +7,6 @@
 extern "C"
 {
 
-
 const double PI = 3.141592653589793238460;
 
 typedef std::complex<double> Complex;
@@ -49,36 +48,28 @@ void dft(std::complex<double> signal[], int size, std::complex<double> signal_df
 
 }
 
-
-void dft2(std::complex<double> signal[], int size, std::complex<double> output[])
-{
-    for (int i = 0; i < size; i++) {
-        std::complex<double> xi (0,0);
-        for (int j = 0; j < size; j++) 
-        {
-            double realpart = cos(((2*PI)/size)*i*j);
-            double imagpart = sin(((2*PI)/size)*i*j);
-            std::complex<double> w (realpart,-imagpart);
-            xi += signal[j] * w;        
-        }
-        output[i] = xi;
-    }
-
-}
-
-// get the real or imag part
-void dft_part(std::complex<double> signal[], int size, double output[], bool real = 1, bool imag = 0)
+void dft_real(std::complex<double> signal[], int size, std::complex<double> output[])
 {
     std::complex<double> signal_dft[size];
     dft(signal, size, signal_dft);
     for(int i = 0; i < size; i++)
     {
-        if(imag)
-            output[i] = signal_dft[i].imag();
-        else
-            output[i] = signal_dft[i].real();
+        output[i] = signal_dft[i].real();
     }
 }
+
+
+void dft_imag(std::complex<double> signal[], int size, double output[])
+{
+    std::complex<double> signal_dft[size];
+    dft(signal, size, signal_dft);
+    for(int i = 0; i < size; i++)
+    { 
+        output[i] = signal_dft[i].imag();
+        
+    }
+}
+
 
 // Cooley–Tukey FFT (in-place)
 void fft(Complex x[], int N) 
@@ -116,34 +107,25 @@ void fft(Complex x[], int N)
 }
 
 
-void fft_part (Complex x[], int N, double output[], bool real = 1, bool imag = 0)
+void fft_real (Complex x[], int N, double output[])
 {  
    fft(x,N);
    for (int i = 0; i < N; i++)
 	{   
-        if(imag)
-		    output[i] = x[i].imag();
-        else
-            output[i] = x[i].real();
+        output[i] = x[i].real();
+	}
+}
+
+void fft_imag (Complex x[], int N, double output[])
+{  
+   fft(x,N);
+   for (int i = 0; i < N; i++)
+	{   
+		output[i] = x[i].imag();
+
 	}
 }
 
 
 
-// int main()
-// {
-//     std::complex<double> signal[] = {1.5, 70.0, 81.0, 90.5, 0.0, 2.0, 15.7, 0.0};
-
-//     std::complex<double> out[8];
-
-//     dft(signal,8, out);
-//     fft(signal, 8);
-
-//     for(int i = 0; i < 8; i++)
-//     {
-//         std::cout << signal[i] << std::endl;
-//         std::cout << out[i] << std::endl;
-//     }
-
-// }
 }

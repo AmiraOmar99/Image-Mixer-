@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96de77a5-b16c-4ec7-ab98-efabcd9ce508" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ezz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fterror.py" beforeDir="false" afterPath="$PROJECT_DIR$/fterror.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ftlib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ftlib.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib.so" beforeDir="false" afterPath="$PROJECT_DIR$/lib.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainUIold.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixer.py" beforeDir="false" afterPath="$PROJECT_DIR$/mixer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixer_output.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oRamadan.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testwin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testwindow.ui" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tSCVHYgBmFHZtVUl1SCYAj2Fhm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96de77a5-b16c-4ec7-ab98-efabcd9ce508" name="Default Changelist" comment="" />
+      <created>1622753127545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622753127545</updated>
+    </task>
+    <servers />
+  </component>
+</project>

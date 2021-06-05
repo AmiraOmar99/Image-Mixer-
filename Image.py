@@ -32,8 +32,6 @@ class Image():
         self.plot.invertY(True)
         self.image_item = pg.ImageItem(data.T)
         self.plot.addItem(self.image_item)
-        self.plot.setXRange(min=0, max=data.shape[0], padding=0)
-        self.plot.setYRange(min=0, max=data.shape[1], padding=0)
         self.plot.autoRange(padding=0)
 
 
